@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+
+
+    <div class="dash-coinUpdates">
+      <ion-row>
+            <ion-card>
+            <ion-card-content>
+              <ion-col col-12><p>Coin: BTC   Price: 2010.30</p></ion-col>
+
+            </ion-card-content>
+
+          </ion-card>
+
+      </ion-row>
+
+    </div>
+
+    <div class="dash-trending">
+      <ion-row>
+      </ion-row>
+
+      <ion-row>
+        <ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="http://via.placeholder.com/50x50">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="http://via.placeholder.com/110x110">
+
+  <ion-card-content>
+    <p>Dummy Crypto Currency stock information</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+      </ion-row>
+
+    </div>
+
+    <div class="dash-forumCarosel">
+      <ion-row>
+          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
+          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
+          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
+      </ion-row>
+    </div>
+    <hr>
+
+
+
+</ion-grid>
+
+</ion-content>
