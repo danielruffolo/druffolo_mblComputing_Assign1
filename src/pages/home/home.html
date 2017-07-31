@@ -1,22 +1,33 @@
 <ion-header>
+
   <ion-navbar>
     <button ion-button menuToggle>
+      
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Dashboard</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content>
   <ion-grid>
 
 
+<!--  -->
+    <div padding class="dash-coinUpdates">
 
-    <div class="dash-coinUpdates">
-      <ion-row>
-            <ion-card>
+      <h1  style="color:white;">Coin Prices</h1>
+
+
+      <ion-row >
+
+            <ion-card class="dash_cardUpdates">
             <ion-card-content>
-              <ion-col col-12><p>Coin: BTC   Price: 2010.30</p></ion-col>
+
+              <!-- <ion-col col-12></ion-col> -->
+
+              <div class="ion-col col-12 item item-text-wrap"><p>Coin: BTC   Price: 2010.30</p></div>
 
             </ion-card-content>
 
@@ -27,7 +38,12 @@
     </div>
 
     <div class="dash-trending">
-      <ion-row>
+      <ion-row padding style="color:white;">
+        <div>
+          <h1>Trending</h1>
+          <p>most popular</p>
+        </div>
+
       </ion-row>
 
       <ion-row>
@@ -71,17 +87,6 @@
       </ion-row>
 
     </div>
-
-    <div class="dash-forumCarosel">
-      <ion-row>
-          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
-          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
-          <ion-col col-4><button ion-button clear (click)="nextPage()"><img src="http://via.placeholder.com/350x350" alt=" " /></button></ion-col>
-      </ion-row>
-    </div>
-    <hr>
-
-
 
 </ion-grid>
 
