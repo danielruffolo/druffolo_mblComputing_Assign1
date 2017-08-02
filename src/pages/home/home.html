@@ -1,8 +1,8 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar >
     <button ion-button menuToggle>
-      
+
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Dashboard</ion-title>
@@ -15,33 +15,26 @@
 
 
 <!--  -->
-    <div padding class="dash-coinUpdates">
-
-      <h1  style="color:white;">Coin Prices</h1>
+<div padding class="dash-create" style="color: white;" (click)="create_menu()">
 
 
-      <ion-row >
 
-            <ion-card class="dash_cardUpdates">
-            <ion-card-content>
+  <div>  <h1>Create a Post</h1>
+    <p>contribute to the community</p></div>
 
-              <!-- <ion-col col-12></ion-col> -->
 
-              <div class="ion-col col-12 item item-text-wrap"><p>Coin: BTC   Price: 2010.30</p></div>
 
-            </ion-card-content>
 
-          </ion-card>
+</div>
 
-      </ion-row>
 
-    </div>
+
 
     <div class="dash-trending">
       <ion-row padding style="color:white;">
         <div>
           <h1>Trending</h1>
-          <p>most popular</p>
+          <p>Todays most popular thread</p>
         </div>
 
       </ion-row>
@@ -86,6 +79,19 @@
 </ion-card>
       </ion-row>
 
+    </div>
+
+
+
+    <div padding class="dash-coinUpdates">
+        <h1  style="color:white;">Coin Prices</h1>
+          <ion-row >
+            <ion-card class="dash_cardUpdates">
+            <ion-card-content>
+              <div class="ion-col col-12 item item-text-wrap"><p>Coin: BTC   Price: 2010.30</p></div>
+            </ion-card-content>
+          </ion-card>
+      </ion-row>
     </div>
 
 </ion-grid>

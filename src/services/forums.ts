@@ -15,4 +15,8 @@ export class ForumService {
              loadForums(){
                  return this.forums.slice();
              }
+
+             deleteForum(index: number){
+                 this.forums.slice(index, 1);
+             }
 }

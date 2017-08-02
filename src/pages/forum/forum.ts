@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { AddForumPage } from '../add-forum/add-forum';
+import { ViewForumPage } from '../view-forum/view-forum';
 import { Forum } from "../../models/forum";
 import { ForumService } from "../../services/forums";
 
@@ -24,7 +25,10 @@ export class ForumPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private forumsService: ForumService) {
+              private forumsService: ForumService,
+              private modalCtrl: ModalController
+
+            ) {
   }
 
 
@@ -32,6 +36,11 @@ export class ForumPage {
     console.log('ionViewDidLoad ForumPage');
     this.forums = this.forumsService.loadForums();
 
+  }
+
+  onOpenForum(forum: Forum, index: number){
+    const modal = this.modalCtrl.create(ViewForumPage, {forum: forum, index: index});
+    modal.present();
   }
 
   goToCreate(){ this.navCtrl.push(AddForumPage); }

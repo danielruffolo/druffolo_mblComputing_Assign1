@@ -1,9 +1,4 @@
-<!--
-  Generated template for the ForumPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -16,14 +11,10 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="page_container">
   <ion-scroll class="forum_scroll" scrollX="true" scrollY="true">
-
     <ion-row>
-
          <ion-card padding *ngFor="let forum of forums; let i = index" (click)="onOpenForum(forum, i)">
-
       <ion-item>
       <ion-avatar item-start>
        <img src="http://via.placeholder.com/50x50">

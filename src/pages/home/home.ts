@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
+import { AddForumPage } from "../add-forum/add-forum";
+
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  params: Object;
+ pushPage: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
+
+  create_menu(){
+    this.pushPage = AddForumPage;
+      this.navCtrl.setRoot(AddForumPage)
+
+  }
+
 
 }

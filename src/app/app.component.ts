@@ -4,9 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
 import { ForumPage } from '../pages/forum/forum';
 import { AddForumPage } from '../pages/add-forum/add-forum';
+import { ViewForumPage } from '../pages/view-forum/view-forum';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +16,7 @@ import { AddForumPage } from '../pages/add-forum/add-forum';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 

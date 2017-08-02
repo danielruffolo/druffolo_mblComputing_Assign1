@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import pages
 import { MyApp } from './app.component';
+import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ForumPage } from '../pages/forum/forum';
@@ -19,6 +20,7 @@ import { ForumService } from "../services/forums";
 @NgModule({
   declarations: [
     MyApp,
+    LoginPage,
     HomePage,
     ListPage,
     ForumPage,
@@ -33,6 +35,7 @@ import { ForumService } from "../services/forums";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
     HomePage,
     ListPage,
     ForumPage,
