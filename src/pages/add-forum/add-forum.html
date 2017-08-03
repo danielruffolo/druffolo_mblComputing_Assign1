@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="container">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <ion-list>
     <ion-item>
@@ -26,7 +26,18 @@
         placeholder="Name of your post"
         name="title"
         ngModel
-        required></ion-input>
+        required>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Author</ion-label>
+      <ion-input
+        type="text"
+        placeholder="created by"
+        name="author"
+        ngModel
+        required>
+        </ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>content</ion-label>
@@ -34,6 +45,54 @@
         name="description"
         ngModel
         required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>date</ion-label>
+      <ion-input
+        type="text"
+        placeholder="date created"
+        name="date"
+        ngModel
+        required>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Coins Related to</ion-label>
+      <ion-input
+        type="text"
+        placeholder="coin related to?"
+        name="coins"
+        ngModel
+        required>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Key Word 1</ion-label>
+      <ion-input
+        type="text"
+        placeholder="enter a key word"
+        name="keyword1"
+        ngModel
+        required>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Key Word 2</ion-label>
+      <ion-input
+        type="text"
+        placeholder="enter a key word"
+        name="keyword2"
+        ngModel>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Key Word 3</ion-label>
+      <ion-input
+        type="text"
+        placeholder="enter a key word"
+        name="keyword3"
+        ngModel>
+        </ion-input>
     </ion-item>
   </ion-list>
   <ion-grid>

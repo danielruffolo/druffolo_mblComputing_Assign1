@@ -28,7 +28,14 @@ export class AddForumPage {
   onSubmit(form: NgForm){
 
 
-    this.forumsService.addForum(form.value.title, form.value.description);
+    this.forumsService.addForum(form.value.title,
+      form.value.author,
+      form.value.description,
+      form.value.dateCreated,
+      form.value.coins,
+      form.value.keyword1,
+      form.value.keyword2,
+      form.value.keyword3);
 
 
 this.navCtrl.push(ForumPage);

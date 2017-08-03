@@ -4,11 +4,19 @@ export class ForumService {
 
     private forums: Forum[] = [];
 
+
+
     addForum(title: string,
-             description: string)
+            author: string,
+            description: string,
+            dateCreated: string,
+            coins: string,
+            keyword1: string,
+            keyword2: string,
+            keyword3: string)
 
             {
-                 const forum = new Forum(title, description);
+                 const forum = new Forum(title, author, description, dateCreated, coins, keyword1, keyword2, keyword3);
                  this.forums.push(forum);
              }
 

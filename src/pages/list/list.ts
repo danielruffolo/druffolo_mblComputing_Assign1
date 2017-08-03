@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { AddForumPage } from '../add-forum/add-forum';
+import { ViewForumPage } from '../view-forum/view-forum';
+import { Forum } from "../../models/forum";
+import { ForumService } from "../../services/forums";
 
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
 })
+// addapting list view to suit forum view
 export class ListPage {
+
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;

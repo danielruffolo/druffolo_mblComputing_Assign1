@@ -1,8 +1,9 @@
 
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar >
     <button ion-button menuToggle>
+
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>View Post</ion-title>
@@ -11,21 +12,43 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="container" >
   <ion-grid>
 
+<div>
+  <ion-card>
 
-        <ion-row>
-          <ion-col text-center>
-            <p>{{forum.title}}</p>
-          </ion-col>
-          <ion-col text-center>
-            <p>{{forum.description}}</p>
-          </ion-col>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Username</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
 
 
-        </ion-row>
+  <ion-card-content>
+    <ion-item>
+      <div>
+        <h2>title:{{forum.title}}</h2>
+        <p>Author: {{forum.author}} Coin: {{forum.coins}}</p>
+        <p>Related: {{forum.keyword1}} - {{forum.keyword2}} - {{forum.keyword3}}</p>
+      </div>
 
+    </ion-item>
+
+    <ion-item>
+      <div>
+        <p> Content:{{forum.description}}</p>
+      </div>
+
+    </ion-item>
+
+  </ion-card-content>
+</ion-card>
+
+
+</div>
 
 
 

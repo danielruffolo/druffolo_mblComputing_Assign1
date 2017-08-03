@@ -8,16 +8,14 @@
 </ion-header>
 
 <ion-content>
+
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <button ion-item *ngFor="let forum of forums; let i = index" (click)="onOpenForum(forum, i)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
+      {{forum.title}}
       <div class="item-note" item-right>
-        {{item.note}}
+        {{forum.description}}
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
