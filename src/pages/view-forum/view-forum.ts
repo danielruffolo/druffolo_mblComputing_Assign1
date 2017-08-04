@@ -8,6 +8,10 @@ import { ForumService } from "../../services/forums"
   templateUrl: 'view-forum.html',
 })
 export class ViewForumPage {
+  // this is the modal for the forum page
+  // here we are passing the forum object, recieving the object specific to the index passed
+  // it should be noted that delete and coment functions are not added in as they require a profile service
+  //to bind to. this has been left until the project requires development of a server/API
   forum: Forum;
   index: number;
 

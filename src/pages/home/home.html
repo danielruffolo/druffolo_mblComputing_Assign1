@@ -1,3 +1,11 @@
+<!-- this is the home page layout
+tried to experament and achieve a grid style dashboard with clickable grid items
+we use ionic grid to achieve the desired look as each clickable item is a row
+this makes styling very easy and is the bootstrap alternative for ionic -->
+
+<!-- the div elements here are clickable events, i built it this way as the look of buttons inside grid elements
+did not suit the styling as much -->
+
 <ion-header>
 
   <ion-navbar >
@@ -44,28 +52,27 @@
         <ion-card >
 
   <ion-item>
+    <!-- here we are viewing the most viewed forum thread -->
+    <!-- this is hardcoded to show example but requies a backend to function  -->
+    <!-- we will be collecting frequency of clicked threads from user accounts -->
     <ion-avatar item-start>
       <img src="http://via.placeholder.com/50x50">
     </ion-avatar>
     <h2>Random Name</h2>
     <p>November 5, 2017</p>
   </ion-item>
-
-
-
   <ion-card-content>
     <p>Dummy Crypto Currency stock information</p>
   </ion-card-content>
-
-
-
 </ion-card>
       </ion-row>
 
     </div>
 
 
-
+<!-- our forum will need a context, Cryptocurrency , this will lead to a view of live coin prices
+however given we are not at the stage of building a server side, this has been left out -->
+<!-- the intention is to dynamically show updated proces on the dashboard with anamation -->
     <div padding class="dash-coinUpdates">
         <h1  style="color:white;">Coin Prices</h1>
           <ion-row >

@@ -16,6 +16,10 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
+  // this is where we navigate to and from app elements
+  // the main dashboard
+  // notice the use of set.Root on the logout function method. this is because we essentially dont want
+  //users to be able to press the back button on the sign in page once the jwt is destoryed later on
 
   create_menu(){
 

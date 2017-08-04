@@ -1,4 +1,5 @@
-
+<!-- this page is where you view the many forum threads that will populate
+it should be noted that its on a scroll view so the more you add, their will not be unexpected behaviour-->
 <ion-header>
 
   <ion-navbar>
@@ -14,16 +15,19 @@
 <ion-content  class="page_container">
   <ion-scroll class="forum_scroll" scrollX="true" scrollY="true">
 
-      <ion-list padding>
+<!-- upon  creation of a forum , we are traversing our forum service array and populating a ion-list with
+clickable forum threads to view we pass index so that we can click on specific forum threads of the array -->
+  <ion-list padding>
   <ion-item ion-item *ngFor="let forum of forums; let i = index" (click)="onOpenForum(forum, i)">
 
     <ion-thumbnail item-start>
       <img src="http://via.placeholder.com/350x150">
     </ion-thumbnail>
+    <!-- this is the syntax used to pass js from server/backend side to client side -->
     <h2> Topic: {{forum.title}}</h2>
     <h2> Coin: {{forum.coins}}</h2>
 
-    
+
   </ion-item>
 </ion-list>
 
@@ -32,12 +36,6 @@
 </ion-scroll>
   <!-- align to the bottom of the page -->
   <ion-footer>
-
-    <!-- <button ion-button block color="primary" (click)="goToCreate()">
-      Create a new forum post
-    </button> -->
-
-
 
     <div  style=" width: 100%; background-color: #1abc9c;">
         <div style="text-align: center">

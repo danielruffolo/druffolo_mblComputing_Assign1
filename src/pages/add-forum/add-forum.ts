@@ -4,12 +4,7 @@ import { NgForm } from "@angular/forms";
 import { ForumService } from "../../services/forums";
 import { ForumPage } from "../forum/forum";
 
-/**
- * Generated class for the AddForumPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 
 @Component({
   selector: 'page-add-forum',
@@ -25,8 +20,10 @@ export class AddForumPage {
                private forumsService: ForumService) {
   }
 
-  onSubmit(form: NgForm){
 
+  onSubmit(form: NgForm){
+// on submit of the forum , we send the data from the form to our forums service class which acts as a
+//middle man between client and server side
 
     this.forumsService.addForum(form.value.title,
       form.value.author,
@@ -36,11 +33,10 @@ export class AddForumPage {
       form.value.keyword1,
       form.value.keyword2,
       form.value.keyword3);
-
+      //i have included key words here as im experamenting with python a way to extract key words
+      //from the form . work in progress and difficult to do so behind the scenes in a non manual manner
 
 this.navCtrl.push(ForumPage);
-
-
     console.log(form.value)
   }
 

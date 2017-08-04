@@ -1,3 +1,9 @@
+<!--
+Daniel Ruffolo
+this page is what writes data to our forum model
+we use a form to submit data to our forum service which then becomes
+part of our forums array
+ -->
 
 <ion-header>
 
@@ -10,7 +16,8 @@
 
 </ion-header>
 
-
+<!-- Ng Form is a ionic package which we use to process the form data on submit
+we parse the argument 'f as our form data when the onsubmit method is called' -->
 <ion-content padding class="container">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <ion-list>
@@ -75,7 +82,7 @@
           type="submit"
            (click)="onSubmit()"
           [disabled]="!f.valid">
-          Store It!
+          Create!
         </button>
       </ion-col>
     </ion-row>
