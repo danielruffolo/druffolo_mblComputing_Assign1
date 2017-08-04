@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 import { ForumPage } from '../pages/forum/forum';
 import { AddForumPage } from '../pages/add-forum/add-forum';
 import { ViewForumPage } from '../pages/view-forum/view-forum';
@@ -23,7 +23,7 @@ import { ForumService } from "../services/forums";
     MyApp,
     LoginPage,
     HomePage,
-    ListPage,
+
     ForumPage,
     AddForumPage,
     ViewForumPage,
@@ -39,7 +39,7 @@ import { ForumService } from "../services/forums";
     MyApp,
     LoginPage,
     HomePage,
-    ListPage,
+
     ForumPage,
     AddForumPage,
     ViewForumPage,

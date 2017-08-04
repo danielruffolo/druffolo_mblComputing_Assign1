@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { AddForumPage } from "../add-forum/add-forum";
 import { ForumPage } from "../forum/forum";
+import { LoginPage } from "../login/login";
 
 @Component({
   selector: 'page-home',
@@ -17,14 +18,21 @@ export class HomePage {
   }
 
   create_menu(){
-    this.pushPage = AddForumPage;
-      this.navCtrl.setRoot(AddForumPage)
+
+      this.navCtrl.push(AddForumPage);
 
   }
 
   view_menu(){
-    this.pushPage = AddForumPage;
-      this.navCtrl.setRoot(ForumPage)
+
+      this.navCtrl.push(ForumPage);
+
+  }
+
+  logout_menu(){
+
+    this.pushPage = LoginPage;
+      this.navCtrl.setRoot(LoginPage);
 
   }
 

@@ -18,11 +18,12 @@
   <ion-item ion-item *ngFor="let forum of forums; let i = index" (click)="onOpenForum(forum, i)">
 
     <ion-thumbnail item-start>
-      <img src="img/thumbnail-totoro.png">
+      <img src="http://via.placeholder.com/350x150">
     </ion-thumbnail>
-    <h2>{{forum.title}}</h2>
-    <p>Users Username • 1988</p>
-    <button ion-button clear item-end>View</button>
+    <h2> Topic: {{forum.title}}</h2>
+    <h2> Coin: {{forum.coins}}</h2>
+
+    
   </ion-item>
 </ion-list>
 
@@ -46,9 +47,7 @@
     <ion-col>
       <button ion-button full (click)="goToCreate()">Create a post</button>
     </ion-col>
-    <ion-col>
-      <button ion-button full>Options</button>
-    </ion-col>
+
   </ion-row>
 </ion-grid>
 

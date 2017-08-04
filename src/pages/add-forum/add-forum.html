@@ -1,9 +1,4 @@
-<!--
-  Generated template for the AddForumPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -20,7 +15,7 @@
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <ion-list>
     <ion-item>
-      <ion-label fixed>Title</ion-label>
+      <ion-label fixed>Title:</ion-label>
       <ion-input
         type="text"
         placeholder="Name of your post"
@@ -30,7 +25,7 @@
         </ion-input>
     </ion-item>
     <ion-item>
-      <ion-label fixed>Author</ion-label>
+      <ion-label fixed>Author:</ion-label>
       <ion-input
         type="text"
         placeholder="created by"
@@ -40,14 +35,14 @@
         </ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>content</ion-label>
+      <ion-label floating>content:</ion-label>
       <ion-textarea
         name="description"
         ngModel
         required></ion-textarea>
     </ion-item>
     <ion-item>
-      <ion-label fixed>date</ion-label>
+      <ion-label fixed>date:</ion-label>
       <ion-input
         type="text"
         placeholder="date created"
@@ -57,7 +52,7 @@
         </ion-input>
     </ion-item>
     <ion-item>
-      <ion-label fixed>Coins Related to</ion-label>
+      <ion-label fixed>Coins Related to:</ion-label>
       <ion-input
         type="text"
         placeholder="coin related to?"
@@ -66,34 +61,7 @@
         required>
         </ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label fixed>Key Word 1</ion-label>
-      <ion-input
-        type="text"
-        placeholder="enter a key word"
-        name="keyword1"
-        ngModel
-        required>
-        </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label fixed>Key Word 2</ion-label>
-      <ion-input
-        type="text"
-        placeholder="enter a key word"
-        name="keyword2"
-        ngModel>
-        </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label fixed>Key Word 3</ion-label>
-      <ion-input
-        type="text"
-        placeholder="enter a key word"
-        name="keyword3"
-        ngModel>
-        </ion-input>
-    </ion-item>
+
   </ion-list>
   <ion-grid>
 

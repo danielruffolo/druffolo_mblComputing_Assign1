@@ -18,6 +18,9 @@ import { ForumService } from "../../services/forums";
 })
 export class ForumPage {
 
+  params: Object;
+ pushPage: any;
+
   AddForumPage = AddForumPage;
   forums: Forum[]=[]
 
@@ -43,7 +46,9 @@ export class ForumPage {
     modal.present();
   }
 
-  goToCreate(){ this.navCtrl.push(AddForumPage); }
+  goToCreate(){
+    this.pushPage = AddForumPage;
+      this.navCtrl.setRoot(AddForumPage) }
 
 
 

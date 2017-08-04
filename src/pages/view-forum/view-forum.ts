@@ -3,13 +3,6 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { Forum } from "../../models/forum";
 import { ForumService } from "../../services/forums"
 
-/**
- * Generated class for the ViewForumPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-view-forum',
   templateUrl: 'view-forum.html',

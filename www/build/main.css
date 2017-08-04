@@ -25224,6 +25224,12 @@ page-home .dash_cardUpdates {
   white-space: normal;
 }
 
+page-home .dash_lower {
+  background-color: #1abc9c;
+  width: 100%;
+  height: 40%;
+}
+
 page-home .dash-trending {
   background-color: #1abc9c;
 }
@@ -25279,4 +25285,8 @@ page-view-forum .container {
 page-view-forum .forum_scroll {
   height: 90%;
   width: 100%;
+}
+
+page-view-forum .threadpost {
+  background-color: white;
 }
