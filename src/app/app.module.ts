@@ -16,6 +16,7 @@ import { ViewForumPage } from '../pages/view-forum/view-forum';
 // _________________________________________________________________//
 //import providers
 import { ForumService } from "../services/forums";
+import { StocksProvider } from '../providers/stocks/stocks';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ForumService } from "../services/forums";
   providers: [
     StatusBar,
     SplashScreen,
-    ForumService
+    ForumService,
+    StocksProvider
   ]
 })
 export class AppModule {}
