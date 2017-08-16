@@ -3,16 +3,17 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 // import pages
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
-
 import { ForumPage } from '../pages/forum/forum';
 import { AddForumPage } from '../pages/add-forum/add-forum';
 import { ViewForumPage } from '../pages/view-forum/view-forum';
+import { CoinsPage } from '../pages/coins/coins';
 // _________________________________________________________________//
 //import providers
 import { ForumService } from "../services/forums";
@@ -24,7 +25,7 @@ import { StocksProvider } from '../providers/stocks/stocks';
     MyApp,
     LoginPage,
     HomePage,
-
+    CoinsPage,
     ForumPage,
     AddForumPage,
     ViewForumPage,
@@ -33,6 +34,7 @@ import { StocksProvider } from '../providers/stocks/stocks';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -40,7 +42,7 @@ import { StocksProvider } from '../providers/stocks/stocks';
     MyApp,
     LoginPage,
     HomePage,
-
+    CoinsPage,
     ForumPage,
     AddForumPage,
     ViewForumPage,

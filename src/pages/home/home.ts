@@ -3,6 +3,7 @@ import { NavController,NavParams } from 'ionic-angular';
 import { AddForumPage } from "../add-forum/add-forum";
 import { ForumPage } from "../forum/forum";
 import { LoginPage } from "../login/login";
+import { CoinsPage } from "../coins/coins";
 
 @Component({
   selector: 'page-home',
@@ -24,6 +25,12 @@ export class HomePage {
   create_menu(){
 
       this.navCtrl.push(AddForumPage);
+
+  }
+
+  coins_menu(){
+
+      this.navCtrl.push(CoinsPage);
 
   }
 

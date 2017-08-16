@@ -1,18 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the StocksProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
+
 @Injectable()
 export class StocksProvider {
 
+  public currency: any = [];
+
+
+
   constructor(public http: Http) {
-    console.log('Hello StocksProvider Provider');
+    console.log('Hello HttpProvider Provider');
+  }
+          
+
+
+  getItem(){
+    return this.http.get('https://api.coinmarketcap.com/v1/ticker/').map(res => res.json());
   }
 
 }
