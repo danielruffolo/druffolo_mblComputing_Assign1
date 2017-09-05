@@ -84,18 +84,22 @@ however given we are not at the stage of building a server side, this has been l
       </ion-row>
     </div>
 
-    <div padding>
+    <div class="dash_lower" padding>
           <ion-row>
+
+            <!-- left lower dash -->
             <ion-col>
-              <div padding class="dash-lower">
+              <div padding class="dash_lower" (click)="account_menu()">
 
 
                 <div>  <h1>Account</h1>
                   <p>View your account and settings</p></div>
               </div>
             </ion-col>
+
+              <!-- right lower dash -->
             <ion-col>
-              <div padding class="dash-lower" (click)="logout_menu()">
+              <div padding class="dash_lower" (click)="logout_menu()">
 
 
                 <div>  <h1>Log-out</h1>

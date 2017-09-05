@@ -25,14 +25,13 @@ export class AddForumPage {
 // on submit of the forum , we send the data from the form to our forums service class which acts as a
 //middle man between client and server side
 
-    this.forumsService.addForum(form.value.title,
+    this.forumsService.addForum(
+
+      form.value.title,
       form.value.author,
       form.value.description,
-      form.value.dateCreated,
-      form.value.coins,
-      form.value.keyword1,
-      form.value.keyword2,
-      form.value.keyword3);
+      form.value.date,
+      form.value.coins);
       //i have included key words here as im experamenting with python a way to extract key words
       //from the form . work in progress and difficult to do so behind the scenes in a non manual manner
 

@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Network } from '@ionic-native/network';
 import { HttpModule } from '@angular/http';
 
 // import pages
@@ -14,6 +15,7 @@ import { ForumPage } from '../pages/forum/forum';
 import { AddForumPage } from '../pages/add-forum/add-forum';
 import { ViewForumPage } from '../pages/view-forum/view-forum';
 import { CoinsPage } from '../pages/coins/coins';
+import { ProfilePage } from '../pages/profile/profile';
 // _________________________________________________________________//
 //import providers
 import { ForumService } from "../services/forums";
@@ -29,7 +31,8 @@ import { StocksProvider } from '../providers/stocks/stocks';
     ForumPage,
     AddForumPage,
     ViewForumPage,
-    SignupPage
+    SignupPage,
+    ProfilePage
 
   ],
   imports: [
@@ -46,7 +49,8 @@ import { StocksProvider } from '../providers/stocks/stocks';
     ForumPage,
     AddForumPage,
     ViewForumPage,
-    SignupPage
+    SignupPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

@@ -10,13 +10,11 @@ export class ForumService {
             author: string,
             description: string,
             dateCreated: string,
-            coins: string,
-            keyword1: string,
-            keyword2: string,
-            keyword3: string)
+            coins: string
+            )
 
             {
-                 const forum = new Forum(title, author, description, dateCreated, coins, keyword1, keyword2, keyword3);
+                 const forum = new Forum(title, author, description, dateCreated, coins);
                  this.forums.push(forum);
              }
 
@@ -27,4 +25,5 @@ export class ForumService {
              deleteForum(index: number){
                  this.forums.slice(index, 1);
              }
+
 }

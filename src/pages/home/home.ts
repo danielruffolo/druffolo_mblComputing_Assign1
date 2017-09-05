@@ -4,6 +4,7 @@ import { AddForumPage } from "../add-forum/add-forum";
 import { ForumPage } from "../forum/forum";
 import { LoginPage } from "../login/login";
 import { CoinsPage } from "../coins/coins";
+import { ProfilePage } from "../profile/profile";
 
 @Component({
   selector: 'page-home',
@@ -39,6 +40,13 @@ export class HomePage {
       this.navCtrl.push(ForumPage);
 
   }
+
+  account_menu(){
+
+      this.navCtrl.push(ProfilePage);
+
+  }
+
 
   logout_menu(){
 
