@@ -20,6 +20,7 @@ import { ProfilePage } from '../pages/profile/profile';
 //import providers
 import { ForumService } from "../services/forums";
 import { StocksProvider } from '../providers/stocks/stocks';
+import { AuthService } from '../providers/auth-service/auth-service';
 
 
 @NgModule({
@@ -33,11 +34,13 @@ import { StocksProvider } from '../providers/stocks/stocks';
     ViewForumPage,
     SignupPage,
     ProfilePage
+    
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    
    
     IonicModule.forRoot(MyApp),
   ],
@@ -59,7 +62,8 @@ import { StocksProvider } from '../providers/stocks/stocks';
     SplashScreen,
     ForumService,
     StocksProvider,
-    Network
+    Network,
+    AuthService
   ]
 })
 export class AppModule {}

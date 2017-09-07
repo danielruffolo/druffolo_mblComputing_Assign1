@@ -1,540 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(201);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var LoginPage = (function () {
-    function LoginPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    LoginPage.prototype.logincall = function () {
-        this.pushPage = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
-    };
-    LoginPage.prototype.signupCall = function () { this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* SignupPage */]); };
-    LoginPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LoginPage');
-    };
-    return LoginPage;
-}());
-LoginPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- start of login template-->\n<ion-content class="login_template" >\n  <div class="page_container">\n\n    <!-- start of login page grid -->\n    <ion-grid>\n\n\n    <!-- start of logo box -->\n    <div padding align="center">\n      <ion-row text-center>\n\n        <ion-card>\n          <img  src="http://via.placeholder.com/150x50"/>\n        </ion-card>\n\n\n             <ion-col>\n               <h1 class="app_title">Crypto-Forums</h1>\n               <p class="app_title">Keeping you in the loop</p>\n\n             </ion-col>\n\n\n\n\n\n      </ion-row>\n    </div>\n    <!-- end logo box -->\n\n\n\n\n    <!-- start of password box -->\n    <div padding align="center">\n      <ion-row>\n        <ion-list>\n\n          <ion-item>\n          <ion-label>Username:</ion-label>\n          <ion-input type="text"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-item>\n          <ion-label>Password:</ion-label>\n          <ion-input type="password"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-label><p class="reset_label">forgot your password?</p></ion-label>\n\n        </ion-list>\n\n      </ion-row>\n    </div>\n    <!-- end of passowrd box -->\n\n\n      <!-- ROW for login/sign up button -->\n      <div class="login_buttons">\n        <ion-row>\n          <ion-col>\n\n          <button ion-button block (click)="logincall()">login</button>\n\n          </ion-col>\n          <ion-col><button ion-button block (click)="signupCall()">Sign Up</button></ion-col>\n\n        </ion-row>\n      </div>\n\n      <!-- end of row for button -->\n\n    </ion-grid>\n\n\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], LoginPage);
-
-//# sourceMappingURL=login.js.map
-
-/***/ }),
-
-/***/ 113:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 113;
-
-/***/ }),
-
-/***/ 155:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 155;
-
-/***/ }),
-
-/***/ 200:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewForumPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_forums__ = __webpack_require__(51);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ViewForumPage = (function () {
-    function ViewForumPage(navCtrl, navParams, viewCtrl, forumsService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.forumsService = forumsService;
-        this.forum = this.navParams.get('forum');
-        this.index = this.navParams.get('index');
-    }
-    ViewForumPage.prototype.onLeave = function () {
-        this.viewCtrl.dismiss();
-    };
-    ViewForumPage.prototype.onDelete = function () {
-        this.forumsService.deleteForum(this.index);
-        this.viewCtrl.dismiss();
-    };
-    ViewForumPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ViewForumPage');
-    };
-    return ViewForumPage;
-}());
-ViewForumPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-view-forum',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/view-forum/view-forum.html"*/'<!-- this is our modal view layout -->\n<!-- this will show the selected Forum thread to be viewed, populate the layout and also provide the\nability to comment on the thread -->\n<ion-header>\n\n  <ion-navbar>\n\n      <ion-title>View Thread</ion-title>\n\n      <ion-buttons end>\n          <button ion-button icon-only (click)="onLeave()">\n              <ion-icon name="arrow-back"></ion-icon>\n          </button>\n\n          <button ion-button icon-only (click)="onDelete()">\n              <ion-icon name="trash"></ion-icon>\n          </button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="container" >\n  <ion-grid>\n\n    <div class="thread_box">\n\n      <ion-card>\n\n  <ion-card-content>\n    <ion-list>\n        <ion-item>\n          <ion-avatar item-start>\n            <img src="http://via.placeholder.com/350x150">\n          </ion-avatar>\n          <h2>{{forum.author}}</h2>\n          <h3>{{forum.title}}</h3>\n\n        </ion-item>\n    </ion-list>\n\n    <div class="thread_content" align="left">\n      <ion-card>\n    <ion-card-content>\n    <h3>Content</h3>\n    <hr>\n\n      <p>{{forum.description}}</p>\n    </ion-card-content>\n\n  </ion-card>\n\n    </div>\n\n\n  </ion-card-content>\n\n  <ion-card-content>\n    <div class="comment_content" align="left">\n      <hr>\n      <h3>Comments:</h3>\n      <ion-list>\n          <ion-card>\n        <ion-card-content>\n          <!-- Add card content here! -->\n          <ion-item>\n            <ion-avatar item-start>\n              <img src="http://via.placeholder.com/350x150">\n            </ion-avatar>\n            <h2>Replier</h2>\n          </ion-item>\n            <p>some random comment content, blah blah blah</p>\n        </ion-card-content>\n\n      </ion-card>\n    </ion-list>\n\n      <hr>\n    </div>\n  </ion-card-content>\n\n  <ion-card-content>\n    <h3>Comment:</h3>\n    <form #f="ngForm" (ngSubmit)="onSubmit_Comment(f)">\n    <ion-list>\n      <ion-item>\n        <ion-input\n          type="text"\n          placeholder="Comment something:"\n          name="thread comment"\n          ngModel\n          required>\n          </ion-input>\n      </ion-item>\n\n    </ion-list>\n    <ion-grid>\n\n\n      <ion-row>\n        <ion-col>\n          <button\n            ion-button\n            color="secondary"\n            block\n            type="submit"\n             (click)="onSubmit()"\n            [disabled]="!f.valid">\n            Comment\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </form>\n  </ion-card-content>\n</ion-card>\n    </div>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/view-forum/view-forum.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_2__services_forums__["a" /* ForumService */]])
-], ViewForumPage);
-
-//# sourceMappingURL=view-forum.js.map
-
-/***/ }),
-
-/***/ 201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(49);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the SignupPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var SignupPage = (function () {
-    function SignupPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    SignupPage.prototype.createCall = function () {
-        this.pushPage = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
-    };
-    SignupPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SignupPage');
-    };
-    return SignupPage;
-}());
-SignupPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-signup',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>signup</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container" padding>\n\n  <!-- start of signup box -->\n  <div padding align="center">\n    <ion-row>\n\n      <ion-card>\n  <ion-card-header>\n    Create a Account\n  </ion-card-header>\n  <ion-card-content>\n    <p>Crypto-Forum is a app that allows you to always be ontop of the world of Cryptocurrency,\n    Todays markets require you to not only focus on the price and economy, but the opinions of the investors\n  themself. Take a step forward in your trading game and be involved in the community</p>\n  </ion-card-content>\n</ion-card>\n\n\n\n    </ion-row>\n  </div>\n  <!-- end of signup box -->\n\n  <!-- start of password box -->\n  <div padding align="center">\n    <ion-row>\n      <ion-list>\n\n        <ion-item>\n        <ion-label>Email:</ion-label>\n        <ion-input type="text"></ion-input>\n        </ion-item>\n\n        <br>\n\n        <ion-item>\n        <ion-label>Password:</ion-label>\n        <ion-input type="password"></ion-input>\n        </ion-item>\n\n        <br>\n\n        <ion-item>\n        <ion-label>Confirm Password:</ion-label>\n        <ion-input type="password"></ion-input>\n        </ion-item>\n\n      </ion-list>\n\n    </ion-row>\n\n    <ion-row>\n    <button ion-button block (click)="createCall()">Create</button>\n  </ion-row>\n\n  </div>\n  <!-- end of passowrd box -->\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], SignupPage);
-
-//# sourceMappingURL=signup.js.map
-
-/***/ }),
-
-/***/ 202:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__ = __webpack_require__(203);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var CoinsPage = (function () {
-    function CoinsPage(navCtrl, navParams, stocksProvider, loadingCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.stocksProvider = stocksProvider;
-        this.loadingCtrl = loadingCtrl;
-        this.currency = [];
-    }
-    CoinsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad coin page');
-    };
-    CoinsPage.prototype.ngOnInit = function () {
-        var _this = this;
-        var loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 3000
-        });
-        loader.present();
-        this.stocksProvider.getItem().subscribe(function (data) {
-            console.log(data);
-            _this.currency = data;
-            loader.dismiss();
-        });
-    };
-    return CoinsPage;
-}());
-CoinsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-coins',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/coins/coins.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <!-- populate list from API -->\n	<ion-list>\n		<ion-item *ngFor="let coin of currency">\n			<h2 style="text-transform: uppercase;">\n        {{coin.id}}\n        {{coin.symbol}}</h2>\n        <p>\n          Price :{{coin.price_usd}}\n        </p>\n        <p>\n          Change: {{coin.percent_change_1h}}\n        </p>\n		</ion-item>\n	</ion-list>\n    <!--  end populate list from API -->\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/coins/coins.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__["a" /* StocksProvider */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* LoadingController */]])
-], CoinsPage);
-
-//# sourceMappingURL=coins.js.map
-
-/***/ }),
-
-/***/ 203:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StocksProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var StocksProvider = (function () {
-    function StocksProvider(http) {
-        this.http = http;
-        this.currency = [];
-        console.log('Hello HttpProvider Provider');
-    }
-    StocksProvider.prototype.getItem = function () {
-        return this.http.get('https://api.coinmarketcap.com/v1/ticker/').map(function (res) { return res.json(); });
-    };
-    return StocksProvider;
-}());
-StocksProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-], StocksProvider);
-
-//# sourceMappingURL=stocks.js.map
-
-/***/ }),
-
-/***/ 204:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ProfilePage = (function () {
-    function ProfilePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    ProfilePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ProfilePage');
-    };
-    return ProfilePage;
-}());
-ProfilePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Your Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- begin page content -->\n<ion-content >\n\n  <div class="page_container">\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Your Profile\n              <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n              <p>Full Name</p>\n              <p>Member since</p>\n\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Your Account\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <p>Username</p>\n              <p>Password</p>\n              <p>Email</p>\n              <p>Phone</p>\n\n\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Coins\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Recent Activity\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Deactivate\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n\n\n\n  </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/profile/profile.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], ProfilePage);
-
-//# sourceMappingURL=profile.js.map
-
-/***/ }),
-
-/***/ 205:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(223);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 223:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_forums__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_stocks_stocks__ = __webpack_require__(203);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-// import pages
-
-
-
-
-
-
-
-
-
-// _________________________________________________________________//
-//import providers
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__["a" /* CoinsPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__["a" /* ForumPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__["a" /* AddForumPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__["a" /* ViewForumPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__["a" /* SignupPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* ProfilePage */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */]),
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__["a" /* CoinsPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__["a" /* ForumPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__["a" /* AddForumPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__["a" /* ViewForumPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__["a" /* SignupPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* ProfilePage */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_16__services_forums__["a" /* ForumService */],
-            __WEBPACK_IMPORTED_MODULE_17__providers_stocks_stocks__["a" /* StocksProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__["a" /* Network */]
-        ]
-    })
-], AppModule);
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 272:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_forum_forum__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_add_forum_add_forum__ = __webpack_require__(50);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
-        this.platform = platform;
-        this.statusBar = statusBar;
-        this.splashScreen = splashScreen;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */];
-        this.initializeApp();
-        // used for an example of ngFor and navigation
-        this.pages = [
-            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Forum', component: __WEBPACK_IMPORTED_MODULE_6__pages_forum_forum__["a" /* ForumPage */] },
-            { title: 'Create a Post', component: __WEBPACK_IMPORTED_MODULE_7__pages_add_forum_add_forum__["a" /* AddForumPage */] }
-        ];
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
-        });
-    };
-    MyApp.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
-    };
-    return MyApp;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
-], MyApp.prototype, "nav", void 0);
-MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/app/app.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-], MyApp);
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 273:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Forum; });
-var Forum = (function () {
-    function Forum(title, author, description, dateCreated, coins) {
-        this.title = title;
-        this.author = author;
-        this.description = description;
-        this.dateCreated = dateCreated;
-        this.coins = coins;
-    }
-    return Forum;
-}());
-
-//# sourceMappingURL=forum.js.map
-
-/***/ }),
-
-/***/ 49:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -543,10 +9,10 @@ var Forum = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_forum_add_forum__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forum_forum__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__coins_coins__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_network__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__coins_coins__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_network__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -621,6 +87,563 @@ HomePage = __decorate([
 
 /***/ }),
 
+/***/ 115:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 115;
+
+/***/ }),
+
+/***/ 157:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 157;
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewForumPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_forums__ = __webpack_require__(51);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ViewForumPage = (function () {
+    function ViewForumPage(navCtrl, navParams, viewCtrl, forumsService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.forumsService = forumsService;
+        this.forum = this.navParams.get('forum');
+        this.index = this.navParams.get('index');
+    }
+    ViewForumPage.prototype.onLeave = function () {
+        this.viewCtrl.dismiss();
+    };
+    ViewForumPage.prototype.onDelete = function () {
+        this.forumsService.deleteForum(this.index);
+        this.viewCtrl.dismiss();
+    };
+    ViewForumPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ViewForumPage');
+    };
+    return ViewForumPage;
+}());
+ViewForumPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-view-forum',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/view-forum/view-forum.html"*/'<!-- this is our modal view layout -->\n<!-- this will show the selected Forum thread to be viewed, populate the layout and also provide the\nability to comment on the thread -->\n<ion-header>\n\n  <ion-navbar>\n\n      <ion-title>View Thread</ion-title>\n\n      <ion-buttons end>\n          <button ion-button icon-only (click)="onLeave()">\n              <ion-icon name="arrow-back"></ion-icon>\n          </button>\n\n          <button ion-button icon-only (click)="onDelete()">\n              <ion-icon name="trash"></ion-icon>\n          </button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="container" >\n  <ion-grid>\n\n    <div class="thread_box">\n\n      <ion-card>\n\n  <ion-card-content>\n    <ion-list>\n        <ion-item>\n          <ion-avatar item-start>\n            <img src="http://via.placeholder.com/350x150">\n          </ion-avatar>\n          <h2>{{forum.author}}</h2>\n          <h3>{{forum.title}}</h3>\n\n        </ion-item>\n    </ion-list>\n\n    <div class="thread_content" align="left">\n      <ion-card>\n    <ion-card-content>\n    <h3>Content</h3>\n    <hr>\n\n      <p>{{forum.description}}</p>\n    </ion-card-content>\n\n  </ion-card>\n\n    </div>\n\n\n  </ion-card-content>\n\n  <ion-card-content>\n    <div class="comment_content" align="left">\n      <hr>\n      <h3>Comments:</h3>\n      <ion-list>\n          <ion-card>\n        <ion-card-content>\n          <!-- Add card content here! -->\n          <ion-item>\n            <ion-avatar item-start>\n              <img src="http://via.placeholder.com/350x150">\n            </ion-avatar>\n            <h2>Replier</h2>\n          </ion-item>\n            <p>some random comment content, blah blah blah</p>\n        </ion-card-content>\n\n      </ion-card>\n    </ion-list>\n\n      <hr>\n    </div>\n  </ion-card-content>\n\n  <ion-card-content>\n    <h3>Comment:</h3>\n    <form #f="ngForm" (ngSubmit)="onSubmit_Comment(f)">\n    <ion-list>\n      <ion-item>\n        <ion-input\n          type="text"\n          placeholder="Comment something:"\n          name="thread comment"\n          ngModel\n          required>\n          </ion-input>\n      </ion-item>\n\n    </ion-list>\n    <ion-grid>\n\n\n      <ion-row>\n        <ion-col>\n          <button\n            ion-button\n            color="secondary"\n            block\n            type="submit"\n             (click)="onSubmit()"\n            [disabled]="!f.valid">\n            Comment\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </form>\n  </ion-card-content>\n</ion-card>\n    </div>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/view-forum/view-forum.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_2__services_forums__["a" /* ForumService */]])
+], ViewForumPage);
+
+//# sourceMappingURL=view-forum.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SignupPage = (function () {
+    function SignupPage(http, navCtrl, authService, toastCtrl) {
+        this.http = http;
+        this.navCtrl = navCtrl;
+        this.authService = authService;
+        this.toastCtrl = toastCtrl;
+        this.userData = { "username": "", "password": "", "name": "", "email": "" };
+    }
+    SignupPage.prototype.signup = function () {
+        var _this = this;
+        this.authService.postData(this.userData, 'signup').then(function (result) {
+            _this.responseData = result;
+            console.log(_this.responseData);
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+            _this.presentToast();
+        }, function (err) {
+            // Error log
+        });
+    };
+    SignupPage.prototype.presentToast = function () {
+        var toast = this.toastCtrl.create({
+            message: 'You have Registered Successfully',
+            duration: 3000,
+            position: 'top'
+        });
+        toast.onDidDismiss(function () {
+            console.log('Dismissed toast');
+        });
+        toast.present();
+    };
+    SignupPage.prototype.login = function () {
+        //Login page link
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    return SignupPage;
+}());
+SignupPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-signup',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>signup</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container" padding>\n\n    <ion-card>\n        <ion-card-header>\n          Registration\n        </ion-card-header>\n        <ion-card-content>\n          <ion-list>\n            <ion-item>\n              <ion-label stacked>Name</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.name"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Email</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.email"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Username</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.username"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Password</ion-label>\n              <ion-input type="password" [(ngModel)]="userData.password"></ion-input>\n            </ion-item>\n    \n            <button ion-button full color="success" (click)="signup()">Sign up</button>\n            <a href="#" (click)="login()">Login Page</a>\n          </ion-list>\n        </ion-card-content>\n      </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
+], SignupPage);
+
+//# sourceMappingURL=signup.js.map
+
+/***/ }),
+
+/***/ 203:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthService = (function () {
+    function AuthService(http) {
+        this.http = http;
+        console.log('Hello AuthService Provider');
+    }
+    AuthService.prototype.postData = function (credentials, type) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            console.log(credentials.username);
+            console.log(credentials);
+            _this.http.post(' http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=' + (credentials.username) + '&data=' + JSON.stringify(credentials), { headers: headers })
+                .subscribe(function (res) {
+                resolve();
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], AuthService);
+
+//# sourceMappingURL=auth-service.js.map
+
+/***/ }),
+
+/***/ 204:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__ = __webpack_require__(205);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CoinsPage = (function () {
+    function CoinsPage(navCtrl, navParams, stocksProvider, loadingCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.stocksProvider = stocksProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.currency = [];
+    }
+    CoinsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad coin page');
+    };
+    CoinsPage.prototype.ngOnInit = function () {
+        var _this = this;
+        var loader = this.loadingCtrl.create({
+            content: "Please wait...",
+            duration: 3000
+        });
+        loader.present();
+        this.stocksProvider.getItem().subscribe(function (data) {
+            console.log(data);
+            _this.currency = data;
+            loader.dismiss();
+        });
+    };
+    return CoinsPage;
+}());
+CoinsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-coins',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/coins/coins.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <!-- populate list from API -->\n	<ion-list>\n		<ion-item *ngFor="let coin of currency">\n			<h2 style="text-transform: uppercase;">\n        {{coin.id}}\n        {{coin.symbol}}</h2>\n        <p>\n          Price :{{coin.price_usd}}\n        </p>\n        <p>\n          Change: {{coin.percent_change_1h}}\n        </p>\n		</ion-item>\n	</ion-list>\n    <!--  end populate list from API -->\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/coins/coins.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__["a" /* StocksProvider */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* LoadingController */]])
+], CoinsPage);
+
+//# sourceMappingURL=coins.js.map
+
+/***/ }),
+
+/***/ 205:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StocksProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var StocksProvider = (function () {
+    function StocksProvider(http) {
+        this.http = http;
+        this.currency = [];
+        console.log('Hello HttpProvider Provider');
+    }
+    StocksProvider.prototype.getItem = function () {
+        return this.http.get('https://api.coinmarketcap.com/v1/ticker/').map(function (res) { return res.json(); });
+    };
+    return StocksProvider;
+}());
+StocksProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], StocksProvider);
+
+//# sourceMappingURL=stocks.js.map
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProfilePage = (function () {
+    function ProfilePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ProfilePage');
+    };
+    return ProfilePage;
+}());
+ProfilePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-profile',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Your Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- begin page content -->\n<ion-content >\n\n  <div class="page_container">\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Your Profile\n              <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n              <p>Full Name</p>\n              <p>Member since</p>\n\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Your Account\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <p>Username</p>\n              <p>Password</p>\n              <p>Email</p>\n              <p>Phone</p>\n\n\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Coins\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Recent Activity\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n    <div class="page_element">\n\n      <ion-card>\n            <ion-card-header>\n              Deactivate\n                  <hr>\n            </ion-card-header>\n\n            <ion-card-content>\n              <!-- Add card content here! -->\n            </ion-card-content>\n      </ion-card>\n\n    </div>\n\n\n\n\n  </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/profile/profile.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], ProfilePage);
+
+//# sourceMappingURL=profile.js.map
+
+/***/ }),
+
+/***/ 207:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(225);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 225:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_forums__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_stocks_stocks__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__ = __webpack_require__(203);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+// import pages
+
+
+
+
+
+
+
+
+
+// _________________________________________________________________//
+//import providers
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__["a" /* CoinsPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__["a" /* ForumPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__["a" /* AddForumPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__["a" /* ViewForumPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__["a" /* SignupPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* ProfilePage */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */]),
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_coins_coins__["a" /* CoinsPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_forum_forum__["a" /* ForumPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_add_forum_add_forum__["a" /* AddForumPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_view_forum_view_forum__["a" /* ViewForumPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__["a" /* SignupPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_profile_profile__["a" /* ProfilePage */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_16__services_forums__["a" /* ForumService */],
+            __WEBPACK_IMPORTED_MODULE_17__providers_stocks_stocks__["a" /* StocksProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__["a" /* Network */],
+            __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__["a" /* AuthService */]
+        ]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_forum_forum__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_add_forum_add_forum__ = __webpack_require__(50);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */];
+        this.initializeApp();
+        // used for an example of ngFor and navigation
+        this.pages = [
+            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
+            { title: 'Forum', component: __WEBPACK_IMPORTED_MODULE_6__pages_forum_forum__["a" /* ForumPage */] },
+            { title: 'Create a Post', component: __WEBPACK_IMPORTED_MODULE_7__pages_add_forum_add_forum__["a" /* AddForumPage */] }
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    return MyApp;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+], MyApp.prototype, "nav", void 0);
+MyApp = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/app/app.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+], MyApp);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Forum; });
+var Forum = (function () {
+    function Forum(title, author, description, dateCreated, coins) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.dateCreated = dateCreated;
+        this.coins = coins;
+    }
+    return Forum;
+}());
+
+//# sourceMappingURL=forum.js.map
+
+/***/ }),
+
 /***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -668,7 +691,7 @@ var AddForumPage = (function () {
 }());
 AddForumPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-add-forum',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/add-forum/add-forum.html"*/'<!--\nDaniel Ruffolo\nthis page is what writes data to our forum model\nwe use a form to submit data to our forum service which then becomes\npart of our forums array\n -->\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Create a Post</ion-title>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- Ng Form is a ionic package which we use to process the form data on submit\nwe parse the argument \'f as our form data when the onsubmit method is called\' -->\n<ion-content padding class="container">\n  <form #f="ngForm" (ngSubmit)="onSubmit(f)">\n  <ion-list>\n    <ion-item>\n      <ion-label fixed>Title:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="Name of your post"\n        name="title"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>Author:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="created by"\n        name="author"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>content:</ion-label>\n      <ion-textarea\n        name="description"\n        ngModel\n        required></ion-textarea>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>date:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="date created"\n        name="date"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>Coins Related to:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="coin related to?"\n        name="coins"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n\n  </ion-list>\n  <ion-grid>\n\n\n    <ion-row>\n      <ion-col>\n        <button\n          ion-button\n          color="secondary"\n          block\n          type="submit"\n           (click)="onSubmit()"\n          [disabled]="!f.valid">\n          Create!\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</form>\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/add-forum/add-forum.html"*/,
+        selector: 'page-add-forum',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/add-forum/add-forum.html"*/'<!--\nDaniel Ruffolo\nthis page is what writes data to our forum model\nwe use a form to submit data to our forum service which then becomes\npart of our forums array\n -->\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Create a Post</ion-title>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- Ng Form is a ionic package which we use to process the form data on submit\nwe parse the argument \'f as our form data when the onsubmit method is called\' -->\n<ion-content padding class="container">\n  <form #f="ngForm" (ngSubmit)="onSubmit(f)">\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label fixed>Title:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="Name of your post"\n        name="title"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label fixed>Author:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="created by"\n        name="author"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>content:</ion-label>\n      <ion-textarea\n        name="description"\n        ngModel\n        required></ion-textarea>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>date:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="date created"\n        name="date"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>Coins Related to:</ion-label>\n      <ion-input\n        type="text"\n        placeholder="coin related to?"\n        name="coins"\n        ngModel\n        required>\n        </ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <ion-grid>\n\n\n    <ion-row>\n      <ion-col>\n        <button\n          ion-button\n          color="secondary"\n          block\n          type="submit"\n           (click)="onSubmit()"\n          [disabled]="!f.valid">\n          Create!\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</form>\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/add-forum/add-forum.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -687,7 +710,7 @@ AddForumPage = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_forum__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_forum__ = __webpack_require__(275);
 
 var ForumService = (function () {
     function ForumService() {
@@ -718,7 +741,7 @@ var ForumService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_forum_add_forum__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_forum_view_forum__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_forum_view_forum__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_forums__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -774,7 +797,61 @@ ForumPage = __decorate([
 
 //# sourceMappingURL=forum.js.map
 
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(202);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    LoginPage.prototype.logincall = function () {
+        this.pushPage = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    };
+    LoginPage.prototype.signupCall = function () { this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* SignupPage */]); };
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
+    };
+    return LoginPage;
+}());
+LoginPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-login',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- start of login template-->\n<ion-content class="login_template" >\n  <div class="page_container">\n\n    <!-- start of login page grid -->\n    <ion-grid>\n\n\n    <!-- start of logo box -->\n    <div padding align="center">\n      <ion-row text-center>\n\n        <ion-card>\n          <img  src="http://via.placeholder.com/150x50"/>\n        </ion-card>\n\n\n             <ion-col>\n               <h1 class="app_title">Crypto-Forums</h1>\n               <p class="app_title">Keeping you in the loop</p>\n\n             </ion-col>\n\n\n\n\n\n      </ion-row>\n    </div>\n    <!-- end logo box -->\n\n\n\n\n    <!-- start of password box -->\n    <div padding align="center">\n      <ion-row>\n        <ion-list>\n\n          <ion-item>\n          <ion-label>Username:</ion-label>\n          <ion-input type="text"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-item>\n          <ion-label>Password:</ion-label>\n          <ion-input type="password"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-label><p class="reset_label">forgot your password?</p></ion-label>\n\n        </ion-list>\n\n      </ion-row>\n    </div>\n    <!-- end of passowrd box -->\n\n\n      <!-- ROW for login/sign up button -->\n      <div class="login_buttons">\n        <ion-row>\n          <ion-col>\n\n          <button ion-button block (click)="logincall()">login</button>\n\n          </ion-col>\n          <ion-col><button ion-button block (click)="signupCall()">Sign Up</button></ion-col>\n\n        </ion-row>\n      </div>\n\n      <!-- end of row for button -->\n\n    </ion-grid>\n\n\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], LoginPage);
+
+//# sourceMappingURL=login.js.map
+
 /***/ })
 
-},[205]);
+},[207]);
 //# sourceMappingURL=main.js.map

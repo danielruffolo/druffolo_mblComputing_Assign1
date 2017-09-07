@@ -20,7 +20,9 @@ part of our forums array
 we parse the argument 'f as our form data when the onsubmit method is called' -->
 <ion-content padding class="container">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
   <ion-list>
+
     <ion-item>
       <ion-label fixed>Title:</ion-label>
       <ion-input
@@ -31,6 +33,7 @@ we parse the argument 'f as our form data when the onsubmit method is called' --
         required>
         </ion-input>
     </ion-item>
+    
     <ion-item>
       <ion-label fixed>Author:</ion-label>
       <ion-input
@@ -70,6 +73,7 @@ we parse the argument 'f as our form data when the onsubmit method is called' --
     </ion-item>
 
   </ion-list>
+
   <ion-grid>
 
 

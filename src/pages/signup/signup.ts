@@ -1,33 +1,54 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {  NavController, ToastController} from 'ionic-angular';
 import { HomePage } from '../home/home';
-/**
- * Generated class for the SignupPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { LoginPage } from '../login/login';
+import { AuthService } from '../../providers/auth-service/auth-service';
+import {Http, Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',
 })
 export class SignupPage {
+  responseData : any;
+  userData = {"username": "","password": "", "name": "","email": ""};
 
-  params: Object;
- pushPage: any;
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController ) {
   }
 
-  createCall(){
-    this.pushPage = HomePage;
-    this.navCtrl.setRoot(HomePage)
+  signup(){
+      this.authService.postData(this.userData,'signup').then((result) => {
+      this.responseData = result;
+      console.log(this.responseData);
+      this.navCtrl.push(LoginPage);
+      this.presentToast();
+   }, (err) => {
+     // Error log
+   });
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'You have Registered Successfully',
+      duration: 3000,
+      position: 'top'
+    });
+  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+  
+    toast.present();
   }
 
+
+
+  login(){
+    //Login page link
+    this.navCtrl.push(LoginPage);
+  }
 }

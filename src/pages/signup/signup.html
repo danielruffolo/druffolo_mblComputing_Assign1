@@ -15,61 +15,37 @@
 
 <ion-content class="container" padding>
 
-  <!-- start of signup box -->
-  <div padding align="center">
-    <ion-row>
-
-      <ion-card>
-  <ion-card-header>
-    Create a Account
-  </ion-card-header>
-  <ion-card-content>
-    <p>Crypto-Forum is a app that allows you to always be ontop of the world of Cryptocurrency,
-    Todays markets require you to not only focus on the price and economy, but the opinions of the investors
-  themself. Take a step forward in your trading game and be involved in the community</p>
-  </ion-card-content>
-</ion-card>
-
-
-
-    </ion-row>
-  </div>
-  <!-- end of signup box -->
-
-  <!-- start of password box -->
-  <div padding align="center">
-    <ion-row>
-      <ion-list>
-
-        <ion-item>
-        <ion-label>Email:</ion-label>
-        <ion-input type="text"></ion-input>
-        </ion-item>
-
-        <br>
-
-        <ion-item>
-        <ion-label>Password:</ion-label>
-        <ion-input type="password"></ion-input>
-        </ion-item>
-
-        <br>
-
-        <ion-item>
-        <ion-label>Confirm Password:</ion-label>
-        <ion-input type="password"></ion-input>
-        </ion-item>
-
-      </ion-list>
-
-    </ion-row>
-
-    <ion-row>
-    <button ion-button block (click)="createCall()">Create</button>
-  </ion-row>
-
-  </div>
-  <!-- end of passowrd box -->
+    <ion-card>
+        <ion-card-header>
+          Registration
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>Name</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Email</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.email"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Username</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.username"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+            </ion-item>
+    
+            <button ion-button full color="success" (click)="signup()">Sign up</button>
+            <a href="#" (click)="login()">Login Page</a>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
 
 
 </ion-content>
