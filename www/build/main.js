@@ -808,6 +808,9 @@ ForumPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -821,20 +824,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * Generated class for the LoginPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
+var login_API_URL = 'http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=';
 var LoginPage = (function () {
-    function LoginPage(navCtrl, navParams) {
+    function LoginPage(navCtrl, navParams, http) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.http = http;
+        this.userLoginData = { "username": "", "password": "" };
     }
-    LoginPage.prototype.logincall = function () {
-        this.pushPage = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    LoginPage.prototype.login = function () {
+        var _this = this;
+        this.http.get(login_API_URL + this.userLoginData.username)
+            .map(function (res) { return res.json(); }).subscribe(function (responseData) {
+            if (responseData.password == _this.userLoginData.password && responseData.username == _this.userLoginData.username)
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+            else
+                console.log('wrong password');
+        });
     };
     LoginPage.prototype.signupCall = function () { this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* SignupPage */]); };
     LoginPage.prototype.ionViewDidLoad = function () {
@@ -844,11 +858,12 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- start of login template-->\n<ion-content class="login_template" >\n  <div class="page_container">\n\n    <!-- start of login page grid -->\n    <ion-grid>\n\n\n    <!-- start of logo box -->\n    <div padding align="center">\n      <ion-row text-center>\n\n        <ion-card>\n          <img  src="http://via.placeholder.com/150x50"/>\n        </ion-card>\n\n\n             <ion-col>\n               <h1 class="app_title">Crypto-Forums</h1>\n               <p class="app_title">Keeping you in the loop</p>\n\n             </ion-col>\n\n\n\n\n\n      </ion-row>\n    </div>\n    <!-- end logo box -->\n\n\n\n\n    <!-- start of password box -->\n    <div padding align="center">\n      <ion-row>\n        <ion-list>\n\n          <ion-item>\n          <ion-label>Username:</ion-label>\n          <ion-input type="text"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-item>\n          <ion-label>Password:</ion-label>\n          <ion-input type="password"></ion-input>\n          </ion-item>\n\n          <br>\n\n          <ion-label><p class="reset_label">forgot your password?</p></ion-label>\n\n        </ion-list>\n\n      </ion-row>\n    </div>\n    <!-- end of passowrd box -->\n\n\n      <!-- ROW for login/sign up button -->\n      <div class="login_buttons">\n        <ion-row>\n          <ion-col>\n\n          <button ion-button block (click)="logincall()">login</button>\n\n          </ion-col>\n          <ion-col><button ion-button block (click)="signupCall()">Sign Up</button></ion-col>\n\n        </ion-row>\n      </div>\n\n      <!-- end of row for button -->\n\n    </ion-grid>\n\n\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n    <ion-navbar>\n      <ion-title>Login</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content class="container" padding>\n  \n      <ion-card>\n          <ion-card-header>\n            Login\n          </ion-card-header>\n          <ion-card-content>\n            <ion-list>\n              <ion-item>\n                <ion-label stacked>Username</ion-label>\n                <ion-input type="text" [(ngModel)]="userLoginData.username"></ion-input>\n              </ion-item>\n      \n              <ion-item>\n                <ion-label stacked>Password</ion-label>\n                <ion-input type="password" [(ngModel)]="userLoginData.password"></ion-input>\n              </ion-item>\n      \n      \n              <button ion-button full color="success" (click)="login()">Login</button>\n              <!-- <a href="#" (click)="login()">Login Page</a> -->\n            </ion-list>\n          </ion-card-content>\n        </ion-card>\n  \n  \n  </ion-content>\n  '/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/login/login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */]) === "function" && _c || Object])
 ], LoginPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=login.js.map
 
 /***/ })
