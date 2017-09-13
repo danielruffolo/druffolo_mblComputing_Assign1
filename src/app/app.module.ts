@@ -21,6 +21,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ForumService } from "../services/forums";
 import { StocksProvider } from '../providers/stocks/stocks';
 import { AuthService } from '../providers/auth-service/auth-service';
+import { Storage, IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -35,15 +36,16 @@ import { AuthService } from '../providers/auth-service/auth-service';
     SignupPage,
     ProfilePage
     
+    
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    
-   
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
   ],
+  
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
