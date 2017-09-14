@@ -15,7 +15,8 @@ export class StocksProvider {
   }
 
   getItem(){
-    return this.http.get('https://api.coinmarketcap.com/v1/ticker/').map(res => res.json());
+    return this.http.get('https://api.coinmarketcap.com/v1/ticker/')
+    .map(res => res.json());
   }
 
 

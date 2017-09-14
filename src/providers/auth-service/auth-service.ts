@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthService {
   
-
+  
+  
 
   constructor(public http : Http) {
     console.log('Hello AuthService Provider');
@@ -19,7 +20,8 @@ export class AuthService {
    
       console.log(credentials.username);
       console.log(credentials);
-      this.http.post(' http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+(credentials.username)+'&data=' + JSON.stringify(credentials), {headers: headers})
+      
+      this.http.post(' http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+(credentials.username)+'&data=' + JSON.stringify(credentials) , {headers: headers})
         .subscribe(res => {
           resolve();
         }, (err) => {

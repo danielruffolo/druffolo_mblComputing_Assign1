@@ -23,7 +23,7 @@ export class HomePage {
 
   displayNetworkUpdate(connectionState: string){
 
-        let networkType = this.network.type
+      let networkType = this.network.type
 
       this.toast.create({
           message: `you are now ${connectionState} via ${networkType}`,
@@ -53,33 +53,27 @@ export class HomePage {
 
 
   create_menu(){
-
     this.navCtrl.push(AddForumPage);
-
   }
 
   coins_menu(){
-
     this.navCtrl.push(CoinsPage);
-
   }
 
   view_menu(){
-
     this.navCtrl.push(ForumPage);
-
   }
 
   account_menu(){
-
     this.navCtrl.push(ProfilePage);
-
   }
 
 
   logout_menu(){
 
-    this.pushPage = LoginPage;
+    this.pushPage = LoginPage;  
+    localStorage.clear();
+    
       this.navCtrl.setRoot(LoginPage);
 
   }

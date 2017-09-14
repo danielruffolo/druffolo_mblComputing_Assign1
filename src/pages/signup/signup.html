@@ -22,9 +22,13 @@
         <ion-card-content>
           <ion-list>
             <ion-item>
-              <ion-label stacked>Name</ion-label>
-              <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
+              <ion-label stacked>First Name</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>
             </ion-item>
+            <ion-item>
+                <ion-label stacked>Last Name</ion-label>
+                <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>
+              </ion-item>
     
             <ion-item>
               <ion-label stacked>Email</ion-label>

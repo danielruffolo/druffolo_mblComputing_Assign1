@@ -45,7 +45,7 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
   ],
-  
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,

@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 })
 export class SignupPage {
   responseData : any;
-  userData = {"username": "","password": "", "name": "","email": ""};
+  userData = {"username": "","password": "", "fname": "", "lname": "","email": ""};
 
 
   constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController ) {
