@@ -25,4 +25,8 @@ export class ProfilePage {
 
   }
 
+  Deactivate(){
+    console.log('your account has been deactivated')
+  }
+
 }

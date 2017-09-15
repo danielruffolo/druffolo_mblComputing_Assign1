@@ -8,7 +8,7 @@ import {StocksProvider} from "../../providers/stocks/stocks";
 })
 export class CoinsPage implements OnInit{
 
-  private currency: any = [];
+   currencyList = [];
 
   constructor(
     public navCtrl: NavController,
@@ -16,6 +16,7 @@ export class CoinsPage implements OnInit{
     private stocksProvider: StocksProvider,
     public loadingCtrl: LoadingController)
      {
+       
      }
 
   ionViewDidLoad() {
@@ -24,22 +25,8 @@ export class CoinsPage implements OnInit{
 
 
   ngOnInit(){
-
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 3000
-
-    });
-
-    loader.present();
-
-
-
-    this.stocksProvider.getItem().subscribe(data=>{
-      console.log(data);
-      this.currency=data;
-        loader.dismiss();
-    })
-
+    this.stocksProvider.getCryptStocks().subscribe( data => this.currencyList = data);
+  
 }
+
 }

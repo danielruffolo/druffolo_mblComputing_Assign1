@@ -11,17 +11,14 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
-import { ForumPage } from '../pages/forum/forum';
-import { AddForumPage } from '../pages/add-forum/add-forum';
-import { ViewForumPage } from '../pages/view-forum/view-forum';
 import { CoinsPage } from '../pages/coins/coins';
 import { ProfilePage } from '../pages/profile/profile';
 // _________________________________________________________________//
 //import providers
-import { ForumService } from "../services/forums";
 import { StocksProvider } from '../providers/stocks/stocks';
 import { AuthService } from '../providers/auth-service/auth-service';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { ForumsProvider } from '../providers/forums/forums';
 
 
 @NgModule({
@@ -30,9 +27,6 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     LoginPage,
     HomePage,
     CoinsPage,
-    ForumPage,
-    AddForumPage,
-    ViewForumPage,
     SignupPage,
     ProfilePage
     
@@ -42,8 +36,7 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot(),
+    IonicModule.forRoot(MyApp)
   ],
 
   bootstrap: [IonicApp],
@@ -52,9 +45,6 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     LoginPage,
     HomePage,
     CoinsPage,
-    ForumPage,
-    AddForumPage,
-    ViewForumPage,
     SignupPage,
     ProfilePage
   ],
@@ -62,10 +52,12 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     StatusBar,
     ToastController,
     SplashScreen,
-    ForumService,
     StocksProvider,
     Network,
-    AuthService
+    AuthService,
+    ForumsProvider
+
+    
   ]
 })
 export class AppModule {}

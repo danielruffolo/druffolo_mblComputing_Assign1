@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams,ToastController } from 'ionic-angular';
-import { AddForumPage } from "../add-forum/add-forum";
-import { ForumPage } from "../forum/forum";
 import { LoginPage } from "../login/login";
 import { CoinsPage } from "../coins/coins";
 import { ProfilePage } from "../profile/profile";
@@ -53,7 +51,7 @@ export class HomePage {
 
 
   create_menu(){
-    this.navCtrl.push(AddForumPage);
+    // this.navCtrl.push(AddForumPage);
   }
 
   coins_menu(){
@@ -61,7 +59,7 @@ export class HomePage {
   }
 
   view_menu(){
-    this.navCtrl.push(ForumPage);
+    // this.navCtrl.push(ForumPage);
   }
 
   account_menu(){

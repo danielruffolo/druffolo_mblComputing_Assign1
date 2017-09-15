@@ -12,8 +12,9 @@ import 'rxjs/add/operator/map';
   templateUrl: 'signup.html',
 })
 export class SignupPage {
+  RegDate: String = new Date().toISOString();
   responseData : any;
-  userData = {"username": "","password": "", "fname": "", "lname": "","email": ""};
+  userData = {"username": "","password": "", "fname": "", "lname": "","email": "","membersince": this.RegDate};
 
 
   constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController ) {
