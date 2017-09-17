@@ -13,16 +13,12 @@ import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { CoinsPage } from '../pages/coins/coins';
 import { ProfilePage } from '../pages/profile/profile';
-import { CreateThreadPage } from "../pages/create-thread/create-thread";
-import { ThreadsPage } from "../pages/threads/threads";
 // _________________________________________________________________//
 //import providers
 import { StocksProvider } from '../providers/stocks/stocks';
 import { AuthService } from '../providers/auth-service/auth-service';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import { ForumsProvider } from '../providers/forums/forums';
-import { LogServiceProvider } from '../providers/log-service/log-service';
-
 
 
 @NgModule({
@@ -32,9 +28,9 @@ import { LogServiceProvider } from '../providers/log-service/log-service';
     HomePage,
     CoinsPage,
     SignupPage,
-    ProfilePage,
-    CreateThreadPage,
-    ThreadsPage
+    ProfilePage
+    
+    
 
   ],
   imports: [
@@ -50,9 +46,7 @@ import { LogServiceProvider } from '../providers/log-service/log-service';
     HomePage,
     CoinsPage,
     SignupPage,
-    ProfilePage,
-    CreateThreadPage,
-    ThreadsPage
+    ProfilePage
   ],
   providers: [
     StatusBar,
@@ -61,8 +55,7 @@ import { LogServiceProvider } from '../providers/log-service/log-service';
     StocksProvider,
     Network,
     AuthService,
-    ForumsProvider,
-    LogServiceProvider
+    ForumsProvider
 
     
   ]

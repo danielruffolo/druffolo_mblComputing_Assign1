@@ -3,8 +3,6 @@ import { NavController,NavParams,ToastController } from 'ionic-angular';
 import { LoginPage } from "../login/login";
 import { CoinsPage } from "../coins/coins";
 import { ProfilePage } from "../profile/profile";
-import { CreateThreadPage } from "../create-thread/create-thread";
-import { ThreadsPage } from "../threads/threads";
 import { Network } from '@ionic-native/network';
 
 
@@ -23,15 +21,16 @@ export class HomePage {
 
   displayNetworkUpdate(connectionState: string){
 
-        let networkType = this.network.type
-        this.toast.create({
-        message: `you are now ${connectionState} via ${networkType}`,
+      let networkType = this.network.type
+
+      this.toast.create({
+          message: `you are now ${connectionState} via ${networkType}`,
       }).present();
   }
 
   ionViewDidEnter(){
       
-        this.network.onConnect().subscribe(data => {
+      this.network.onConnect().subscribe(data => {
           console.log(data)
           this.displayNetworkUpdate(data.type);
 
@@ -51,16 +50,16 @@ export class HomePage {
   //users to be able to press the back button on the sign in page once the jwt is destoryed later on
 
 
-  create_thread(){
-     this.navCtrl.push(CreateThreadPage);
+  create_menu(){
+    // this.navCtrl.push(AddForumPage);
   }
 
   coins_menu(){
     this.navCtrl.push(CoinsPage);
   }
 
-  view_threads(){
-     this.navCtrl.push(ThreadsPage);
+  view_menu(){
+    // this.navCtrl.push(ForumPage);
   }
 
   account_menu(){
