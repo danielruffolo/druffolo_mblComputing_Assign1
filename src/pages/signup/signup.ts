@@ -4,6 +4,9 @@ import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
 import { AuthService } from '../../providers/auth-service/auth-service';
 import {Http, Headers} from '@angular/http';
+import { NgForm } from "@angular/forms";
+import { UsersService } from "../../services/users";
+
 import 'rxjs/add/operator/map';
 
 
@@ -13,24 +16,33 @@ import 'rxjs/add/operator/map';
 })
 export class SignupPage {
   RegDate: String = new Date().toISOString();
-  responseData : any;
-  userData = {"username": "","password": "", "fname": "", "lname": "","email": "","membersince": this.RegDate};
+  user: any;
 
 
-  constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController ) {
+  constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController, private usersService: UsersService, ) {
   }
 
-  signup(){
-      this.authService.postData(this.userData,'signup').then((result) => {
-      this.responseData = result;
-      console.log(this.responseData);
-      this.navCtrl.push(LoginPage);
-      this.presentToast();
-   }, (err) => {
-     // Error log
-   });
+  onSubmit(form: NgForm) {
+    
+    
+        this.authService.addUser(form.value.firstname,
+                                   form.value.lastname, 
+                                   form.value.email,
+                                   form.value.username,
+                                   form.value.password,
+                                   form.value.timestamp);
+        
+        form.reset();
 
-  }
+        this.authService.postData(this.user);
+       
+        
+        console.log('user added');
+    
+    this.navCtrl.push(LoginPage);
+    this.presentToast();
+    
+      }
 
   presentToast() {
     let toast = this.toastCtrl.create({

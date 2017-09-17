@@ -7,8 +7,6 @@ import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 
 
-
-
 @Injectable()
 export class StocksProvider {
 

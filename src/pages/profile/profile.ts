@@ -8,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  currentUser = JSON.parse(localStorage.getItem('userData'));
+  // currentUser = JSON.parse(localStorage.getItem('userData'));
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // const currentUser = JSON.parse(localStorage.getItem('userData'));
@@ -19,7 +19,7 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
-    console.log(this.currentUser);
+    // console.log(this.currentUser);
     
     
 
