@@ -182,9 +182,10 @@ SignupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-signup',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>signup</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container" padding>\n\n    <ion-card>\n        <ion-card-header>\n          Registration\n        </ion-card-header>\n        <ion-card-content>\n          <ion-list>\n            <ion-item>\n              <ion-label stacked>First Name</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked>Last Name</ion-label>\n                <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>\n              </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Email</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.email"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Username</ion-label>\n              <ion-input type="text" [(ngModel)]="userData.username"></ion-input>\n            </ion-item>\n    \n            <ion-item>\n              <ion-label stacked>Password</ion-label>\n              <ion-input type="password" [(ngModel)]="userData.password"></ion-input>\n            </ion-item>\n    \n            <button ion-button full color="success" (click)="signup()">Sign up</button>\n           \n          </ion-list>\n        </ion-card-content>\n      </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/signup/signup.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]) === "function" && _d || Object])
 ], SignupPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=signup.js.map
 
 /***/ }),
@@ -649,6 +650,7 @@ MyApp = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateThreadPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -660,29 +662,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the CreateThreadPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 var CreateThreadPage = (function () {
-    function CreateThreadPage(navCtrl, navParams) {
+    function CreateThreadPage(navCtrl, navParams, stocksProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.stocksProvider = stocksProvider;
+        this.currentUser = JSON.parse(localStorage.getItem('userData'));
+        this.RegDate = new Date().toISOString();
+        this.thread = { "title": "", "createdBy_username": this.currentUser.username, "content": "", "created": this.RegDate };
     }
     CreateThreadPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CreateThreadPage');
+    };
+    CreateThreadPage.prototype.ngOnInit = function () {
+        // this.stocksProvider.getCryptStocks()
+        // .subscribe( data => this.currencyList = data);
+        // console.log (this.currencyList);  
+    };
+    CreateThreadPage.prototype.createThread_Form = function () {
+        console.log(this.thread);
     };
     return CreateThreadPage;
 }());
 CreateThreadPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-create-thread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/create-thread/create-thread.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    \n      <ion-navbar>\n        <ion-title>Create a thread</ion-title>\n      </ion-navbar>\n    \n    </ion-header>\n    \n    <!-- begin page content -->\n    <ion-content >\n    \n      <div class="page_container">\n    \n        <div class="page_element">\n    \n          <ion-card>\n              \n    \n                <ion-card-content>\n                  <!-- Add card content here! -->\n           \n    \n               \n               \n                  \n                  \n    \n                </ion-card-content>\n          </ion-card>\n    \n        </div>\n    \n        <div class="page_element">\n    \n          <ion-card>\n              \n    \n                <ion-card-content>\n           \n                </ion-card-content>\n          </ion-card>\n    \n        </div>\n    \n    \n        <div class="page_element">\n    \n          <ion-card>\n            \n    \n                <ion-card-content>\n                  <!-- Add card content here! -->\n                </ion-card-content>\n          </ion-card>\n    \n        </div>\n    \n        <div class="page_element">\n    \n          <ion-card>\n             \n    \n                <ion-card-content>\n                  <!-- Add card content here! -->\n                </ion-card-content>\n          </ion-card>\n    \n        </div>\n      </div>\n    \n    \n    \n    </ion-content>\n    '/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/create-thread/create-thread.html"*/,
+        selector: 'page-create-thread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/create-thread/create-thread.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    \n      <ion-navbar>\n        <ion-title>Create a thread</ion-title>\n      </ion-navbar>\n    \n    </ion-header>\n    \n    <!-- begin page content -->\n    <ion-content >\n    \n      <div class="page_container">\n\n    <form (ngSubmit)="createThread_Form()">\n    \n        <div class="page_element">\n              <ion-card>\n                <ion-card-header>\n                  Give your Thread a Title:\n                  <hr>\n                  \n                </ion-card-header>  \n\n                <ion-card-content>\n                <ion-list>\n                    <ion-item type="text" [(ngModel)]="thread.title" name="title">\n                        <ion-label stacked>Title:</ion-label>\n                        <ion-input type="text"></ion-input>\n                      </ion-item>\n                </ion-list>\n\n                </ion-card-content>  \n                  \n              </ion-card>\n        </div>\n\n        <div class="page_element">\n            <ion-card>\n              <ion-card-header>\n                Give your thread some Content:\n                <hr>\n              </ion-card-header> \n\n              <ion-card-content>\n\n              <ion-list>\n                  <ion-item type="text" [(ngModel)]="thread.content" name="content">\n                      <ion-label stacked>Content:</ion-label>\n                      <ion-input type="text"></ion-input>\n                    </ion-item>\n              </ion-list>\n\n            </ion-card-content>\n\n            </ion-card>\n      </div>\n\n      <!-- <div class="page_element">\n          <ion-card>\n            <ion-card-header>\n              What Currencies is your thread related to?\n              <hr>\n              \n            </ion-card-header>  \n            <ion-card-content>\n            <ion-list>\n                <ion-item>\n                    <ion-label>Coins:</ion-label>\n\n                    <ion-select (loadState)="loadCoins()" \n                                [(ngModel)]="thread.coins"\n                                name="thread_coins"\n                                 multiple="true">\n\n                          <ion-option *ngFor="let coin of currencyList" \n                                      [value]="coin">{{coin.id}}>\n\n                          </ion-option>\n\n\n                    </ion-select>\n\n                </ion-item>\n            </ion-list>\n          </ion-card-content>\n          </ion-card>\n    </div> -->\n\n    <div class="page_element">\n        <ion-card>\n          <ion-card-content>\n          <ion-list>\n              <button ion-button full color="success" type="submit" (click)="  createThread_Form">Create</button>\n              \n          </ion-list>\n        </ion-card-content>\n        </ion-card>\n  </div>\n</form>\n</div>\n    \n    \n    \n    </ion-content>\n    '/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/create-thread/create-thread.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__["a" /* StocksProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__["a" /* StocksProvider */]) === "function" && _c || Object])
 ], CreateThreadPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=create-thread.js.map
 
 /***/ }),

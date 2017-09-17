@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {StocksProvider} from "../../providers/stocks/stocks";
 
-/**
- * Generated class for the CreateThreadPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-create-thread',
@@ -14,11 +9,36 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CreateThreadPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  currentUser = JSON.parse(localStorage.getItem('userData'));
+  
+  currencyList: string;
+  RegDate: String = new Date().toISOString();
+  responseData : any;
+  thread = {"title": "","createdBy_username": this.currentUser.username,"content": "","created": this.RegDate};
+
+  constructor(public navCtrl: NavController,
+               public navParams: NavParams,
+               private stocksProvider: StocksProvider,) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() 
+  {
     console.log('ionViewDidLoad CreateThreadPage');
+
   }
+
+  ngOnInit(){
+    // this.stocksProvider.getCryptStocks()
+    // .subscribe( data => this.currencyList = data);
+    // console.log (this.currencyList);  
+}
+
+    createThread_Form() {
+    console.log(this.thread);
+
+  }
+
+  
 
 }

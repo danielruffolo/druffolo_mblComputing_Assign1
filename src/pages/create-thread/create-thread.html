@@ -16,63 +16,94 @@
     <ion-content >
     
       <div class="page_container">
+
+    <form (ngSubmit)="createThread_Form()">
     
         <div class="page_element">
-    
-          <ion-card>
-              
-    
-                <ion-card-content>
-                  <!-- Add card content here! -->
-           
-    
-               
-               
+              <ion-card>
+                <ion-card-header>
+                  Give your Thread a Title:
+                  <hr>
                   
+                </ion-card-header>  
+
+                <ion-card-content>
+                <ion-list>
+                    <ion-item type="text" [(ngModel)]="thread.title" name="title">
+                        <ion-label stacked>Title:</ion-label>
+                        <ion-input type="text"></ion-input>
+                      </ion-item>
+                </ion-list>
+
+                </ion-card-content>  
                   
-    
-                </ion-card-content>
-          </ion-card>
-    
+              </ion-card>
         </div>
-    
+
         <div class="page_element">
-    
-          <ion-card>
-              
-    
-                <ion-card-content>
-           
-                </ion-card-content>
-          </ion-card>
-    
-        </div>
-    
-    
-        <div class="page_element">
-    
-          <ion-card>
-            
-    
-                <ion-card-content>
-                  <!-- Add card content here! -->
-                </ion-card-content>
-          </ion-card>
-    
-        </div>
-    
-        <div class="page_element">
-    
-          <ion-card>
-             
-    
-                <ion-card-content>
-                  <!-- Add card content here! -->
-                </ion-card-content>
-          </ion-card>
-    
-        </div>
+            <ion-card>
+              <ion-card-header>
+                Give your thread some Content:
+                <hr>
+              </ion-card-header> 
+
+              <ion-card-content>
+
+              <ion-list>
+                  <ion-item type="text" [(ngModel)]="thread.content" name="content">
+                      <ion-label stacked>Content:</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+              </ion-list>
+
+            </ion-card-content>
+
+            </ion-card>
       </div>
+
+      <!-- <div class="page_element">
+          <ion-card>
+            <ion-card-header>
+              What Currencies is your thread related to?
+              <hr>
+              
+            </ion-card-header>  
+            <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Coins:</ion-label>
+
+                    <ion-select (loadState)="loadCoins()" 
+                                [(ngModel)]="thread.coins"
+                                name="thread_coins"
+                                 multiple="true">
+
+                          <ion-option *ngFor="let coin of currencyList" 
+                                      [value]="coin">{{coin.id}}>
+
+                          </ion-option>
+
+
+                    </ion-select>
+
+                </ion-item>
+            </ion-list>
+          </ion-card-content>
+          </ion-card>
+    </div> -->
+
+    <div class="page_element">
+        <ion-card>
+          <ion-card-content>
+          <ion-list>
+              <button ion-button full color="success" type="submit" (click)="  createThread_Form">Create</button>
+              
+          </ion-list>
+        </ion-card-content>
+        </ion-card>
+  </div>
+</form>
+</div>
     
     
     
