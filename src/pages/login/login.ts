@@ -4,6 +4,8 @@ import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { Http, Headers } from '@angular/http';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { LogServiceProvider } from '../../providers/log-service/log-service';
+
 import 'rxjs/add/operator/map';
 
 
@@ -30,32 +32,30 @@ export class LoginPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http: Http) {
+  constructor(public navCtrl: NavController,
+               public navParams: NavParams,
+               public http: Http,
+              public logServiceProvider:LogServiceProvider) {
 
 
   }
   login(){
 
-
-
     this.http.get(login_API_URL + this.userLoginData.username)
       .map(res => res.json()).subscribe(responseData => {
      
-      
         if (responseData.password == this.userLoginData.password &&
            responseData.username == this.userLoginData.username)
           {
 
-          
           this.navCtrl.setRoot(HomePage)
           console.log(responseData);
-
           localStorage.setItem('userData', JSON.stringify(responseData));
+
+           
           
           }
           
-
-
         else
           console.log('wrong password');
       
