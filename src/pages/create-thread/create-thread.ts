@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {StocksProvider} from "../../providers/stocks/stocks";
+import {ForumsProvider} from "../../providers/forums/forums";
 
 
 @Component({
@@ -19,7 +20,9 @@ export class CreateThreadPage {
 
   constructor(public navCtrl: NavController,
                public navParams: NavParams,
-               private stocksProvider: StocksProvider,) {
+               private stocksProvider: StocksProvider,
+               private forumsProvider: ForumsProvider
+              ) {
   }
 
   ionViewDidLoad() 
@@ -34,10 +37,13 @@ export class CreateThreadPage {
     // console.log (this.currencyList);  
 }
 
-    createThread_Form() {
-    console.log(this.thread);
+        
+createThread_Form(){
+      console.log(this.thread);
+  
 
-  }
+    }
+
 
   
 

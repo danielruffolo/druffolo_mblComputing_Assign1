@@ -16,7 +16,7 @@ import 'rxjs/add/operator/map';
  * on Ionic pages and navigation.
  */
 
-let login_API_URL = 'http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=';
+let login_API_URL = 'http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=Users';
 
 @Component({
   selector: 'page-login',
@@ -41,8 +41,9 @@ export class LoginPage {
   }
   login(){
 
-    this.http.get(login_API_URL + this.userLoginData.username)
+    this.http.get(login_API_URL)
       .map(res => res.json()).subscribe(responseData => {
+        console.log(responseData);
      
         if (responseData.password == this.userLoginData.password &&
            responseData.username == this.userLoginData.username)
