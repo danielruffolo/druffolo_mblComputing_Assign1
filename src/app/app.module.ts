@@ -19,7 +19,10 @@ import { StocksProvider } from '../providers/stocks/stocks';
 import { AuthService } from '../providers/auth-service/auth-service';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import { ForumsProvider } from '../providers/forums/forums';
+<<<<<<< HEAD
 import { UsersService } from "../services/users";
+=======
+>>>>>>> parent of 686f069... Sun 17 sept quick save
 
 
 @NgModule({
@@ -56,8 +59,12 @@ import { UsersService } from "../services/users";
     StocksProvider,
     Network,
     AuthService,
+<<<<<<< HEAD
     ForumsProvider,
     UsersService
+=======
+    ForumsProvider
+>>>>>>> parent of 686f069... Sun 17 sept quick save
 
     
   ]
