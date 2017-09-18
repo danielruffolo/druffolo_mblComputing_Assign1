@@ -13,6 +13,8 @@ import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { CoinsPage } from '../pages/coins/coins';
 import { ProfilePage } from '../pages/profile/profile';
+import { AddthreadPage } from '../pages/addthread/addthread';
+import { ViewthreadsPage } from '../pages/viewthreads/viewthreads';
 // _________________________________________________________________//
 //import providers
 import { StocksProvider } from '../providers/stocks/stocks';
@@ -28,7 +30,9 @@ import { ForumServiceProvider } from '../providers/forum-service/forum-service';
     HomePage,
     CoinsPage,
     SignupPage,
-    ProfilePage
+    ProfilePage,
+    AddthreadPage,
+    ViewthreadsPage
     
     
 
@@ -46,7 +50,9 @@ import { ForumServiceProvider } from '../providers/forum-service/forum-service';
     HomePage,
     CoinsPage,
     SignupPage,
-    ProfilePage
+    ProfilePage,
+    AddthreadPage,
+    ViewthreadsPage
   ],
   providers: [
     StatusBar,

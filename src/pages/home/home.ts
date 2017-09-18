@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController,NavParams,ToastController } from 'ionic-angular';
 import { LoginPage } from "../login/login";
 import { CoinsPage } from "../coins/coins";
+import { ViewthreadsPage } from "../viewthreads/viewthreads";
+import { AddthreadPage } from "../addthread/addthread";
 import { ProfilePage } from "../profile/profile";
 import { Network } from '@ionic-native/network';
 
@@ -51,7 +53,7 @@ export class HomePage {
 
 
   create_menu(){
-    // this.navCtrl.push(AddForumPage);
+     this.navCtrl.push(AddthreadPage);
   }
 
   coins_menu(){
@@ -59,7 +61,7 @@ export class HomePage {
   }
 
   view_menu(){
-    // this.navCtrl.push(ForumPage);
+     this.navCtrl.push(ViewthreadsPage);
   }
 
   account_menu(){

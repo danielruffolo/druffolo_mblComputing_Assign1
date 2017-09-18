@@ -1,0 +1,45 @@
+
+
+    <ion-header>
+        
+          <ion-navbar >
+            <button ion-button menuToggle>
+        
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Create Thread</ion-title>
+          </ion-navbar>
+        
+        </ion-header>
+
+      <ion-content padding>
+
+
+          <ion-card>
+          
+            <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label stacked>Thread Title</ion-label>
+                  <ion-input type="text" [(ngModel)]="threadData.title"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label stacked>Thread Topic</ion-label>
+                    <ion-input type="text" [(ngModel)]="threadData.topic"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label stacked>Thread Content</ion-label>
+                      <ion-input type="text" [(ngModel)]="threadData.content"></ion-input>
+                    </ion-item>
+
+              
+
+                <button ion-button full color="success" (click)="create_Thread()">Create Thread</button>
+              </ion-list>
+            </ion-card-content>
+
+          </ion-card>
+</ion-content>
