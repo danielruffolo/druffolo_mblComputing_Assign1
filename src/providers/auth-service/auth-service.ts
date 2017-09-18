@@ -1,51 +1,40 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import { User } from "../../models/user";
-
+let datastore_addUserUrl = 'http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=';
+let datastore_addUserUrl2 = '&data=';
 
 
 
 @Injectable()
-export class AuthService {
-  
-  private Users: User[] = [];
-  
+export class AuthServiceProvider {
+
   constructor(public http : Http) {
     console.log('Hello AuthService Provider');
   }
 
-  addUser(username: string,password: string,firstname: string,lastname: string,email: string,timestamp: string)
   
-              {
-                   const user = new User(
-                       
-                      username,
-                      password,
-                      firstname,
-                      lastname,
-                      email,
-                      timestamp);
-                   this.Users.push(user);
-                   console.log(user);
   
-               }
 
-
-
-  postData(user) {
+  postData(credentials, type) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
-   
-      this.http.post(' http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+(user.username)+'&data=' + JSON.stringify(user) , {headers: headers})
-        .subscribe(res => {
-          resolve();
-        }, (err) => {
-          reject(err);
-        });
+
+      this.http.post(datastore_addUserUrl + credentials.username + datastore_addUserUrl2 + JSON.stringify(credentials), {headers: headers})
+         // Call map on the response observable to get the parsed object.
+    // Subscribe to the observable to get the parsed object and use it.
+    .subscribe((res) => {
+      resolve(res);      
+    }, (err) => {
+	    console.log(err);
+    });
     });
 
   }
 
 }
+
+
+
+

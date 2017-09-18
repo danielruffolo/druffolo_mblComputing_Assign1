@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import {  NavController, ToastController} from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
-import { AuthService } from '../../providers/auth-service/auth-service';
 import {Http, Headers} from '@angular/http';
 import { NgForm } from "@angular/forms";
-import { UsersService } from "../../services/users";
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 import 'rxjs/add/operator/map';
 
@@ -16,33 +15,27 @@ import 'rxjs/add/operator/map';
 })
 export class SignupPage {
   RegDate: String = new Date().toISOString();
-  user: any;
+  responseData : any;
+  userData = {"username": "","password": "", "fname": "","lname": "","email": "","membersince":this.RegDate };
 
 
-  constructor(public http: Http,public navCtrl: NavController, public authService:AuthService,public toastCtrl: ToastController, private usersService: UsersService, ) {
+  constructor(public http: Http,
+              public navCtrl: NavController,
+              public toastCtrl: ToastController,
+              public authService: AuthServiceProvider) {
   }
 
-  onSubmit(form: NgForm) {
-    
-    
-        this.authService.addUser(form.value.firstname,
-                                   form.value.lastname, 
-                                   form.value.email,
-                                   form.value.username,
-                                   form.value.password,
-                                   form.value.timestamp);
-        
-        form.reset();
+  signup(){
+    this.authService.postData(this.userData,'signup').then((result) => {
+     this.responseData = result;
+     console.log(this.responseData);
+     this.navCtrl.push(LoginPage);
+   }, (err) => {
+     // Error log
+   });
 
-        this.authService.postData(this.user);
-       
-        
-        console.log('user added');
-    
-    this.navCtrl.push(LoginPage);
-    this.presentToast();
-    
-      }
+ }
+
 
   presentToast() {
     let toast = this.toastCtrl.create({

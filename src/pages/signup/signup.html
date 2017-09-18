@@ -1,81 +1,52 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Register
-    </ion-title>
-   
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <ion-list>
 
-      <ion-item>
-        <ion-label fixed>First Name</ion-label>
-        <ion-input
-          type="text"
-          placeholder="First Name"
-          name="firstname"
-          ngModel
-          required></ion-input>
-      </ion-item>
+    <ion-header>
+        
+          <ion-navbar >
+            <button ion-button menuToggle>
+        
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Register</ion-title>
+          </ion-navbar>
+        
+        </ion-header>
 
-      <ion-item>
-          <ion-label fixed>Last Name</ion-label>
-          <ion-input
-            type="text"
-            placeholder="Last Name"
-            name="lastname"
-            ngModel
-            required></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label fixed>Email</ion-label>
-            <ion-input
-              type="text"
-              placeholder="Email"
-              name="email"
-              ngModel
-              required></ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label fixed>Username</ion-label>
-              <ion-input
-                type="text"
-                placeholder="Username"
-                name="username"
-                ngModel
-                required></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label fixed>Password</ion-label>
-                <ion-input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  ngModel
-                  required></ion-input>
-              </ion-item>
+      <ion-content padding>
 
- 
-    </ion-list>
-    <ion-grid>
-    
-      <ion-row>
-        <ion-col>
-          <button
-            ion-button
-            color="secondary"
-            block
-            type="submit"
-             (click)="onSubmit(f)"
-            [disabled]="!f.valid">
-            Store It!
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
+
+          <ion-card>
+          
+            <ion-card-content>
+              <ion-list>
+                <ion-item>
+                  <ion-label stacked>First Name</ion-label>
+                  <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label stacked>Last Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>
+                  </ion-item>
+
+                <ion-item>
+                  <ion-label stacked>Email</ion-label>
+                  <ion-input type="text" [(ngModel)]="userData.email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label stacked>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="userData.username"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label stacked>Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+                </ion-item>
+
+                <button ion-button full color="success" (click)="signup()">Sign up</button>
+              </ion-list>
+            </ion-card-content>
+
+          </ion-card>
 </ion-content>
-

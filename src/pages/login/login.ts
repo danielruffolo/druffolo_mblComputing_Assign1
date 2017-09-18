@@ -7,13 +7,6 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
 import 'rxjs/add/operator/map';
 
 
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 let login_API_URL = 'http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=';
 
 @Component({
@@ -26,6 +19,8 @@ export class LoginPage {
  pushPage: any;
 
  responseData : any;
+ userData : any;
+ 
  userLoginData = {"username": "","password": ""};
 
 
@@ -36,26 +31,21 @@ export class LoginPage {
   }
   login(){
 
-
-
     this.http.get(login_API_URL + this.userLoginData.username)
+    // console.log(this.userLoginData.username)
       .map(res => res.json()).subscribe(responseData => {
      
-      
         if (responseData.password == this.userLoginData.password &&
            responseData.username == this.userLoginData.username)
           {
 
-          
           this.navCtrl.setRoot(HomePage)
           console.log(responseData);
-
+       
           localStorage.setItem('userData', JSON.stringify(responseData));
           
           }
-          
-
-
+      
         else
           console.log('wrong password');
       
