@@ -15,6 +15,8 @@ import { CoinsPage } from '../pages/coins/coins';
 import { ProfilePage } from '../pages/profile/profile';
 import { AddthreadPage } from '../pages/addthread/addthread';
 import { ViewthreadsPage } from '../pages/viewthreads/viewthreads';
+import { ThreadPage } from '../pages/thread/thread';
+
 // _________________________________________________________________//
 //import providers
 import { StocksProvider } from '../providers/stocks/stocks';
@@ -34,7 +36,8 @@ import { ThreadsService } from '../services/threads';
     SignupPage,
     ProfilePage,
     AddthreadPage,
-    ViewthreadsPage
+    ViewthreadsPage,
+    ThreadPage
     
     
 
@@ -54,7 +57,8 @@ import { ThreadsService } from '../services/threads';
     SignupPage,
     ProfilePage,
     AddthreadPage,
-    ViewthreadsPage
+    ViewthreadsPage,
+    ThreadPage
   ],
   providers: [
     StatusBar,

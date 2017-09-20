@@ -55,7 +55,13 @@ export class ForumServiceProvider {
     .catch(this.catchError)      
     }
 
-
+  getThreadData_Instance( string_obj){
+    return this.http.get('http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=' + string_obj)
+    .do(this.logResponse)
+    .map(this.extractData)
+    .do(this.logResponse)
+    .catch(this.catchError)      
+    }
 
   private catchError(error : Response | any){
     console.log(error);

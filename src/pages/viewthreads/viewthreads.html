@@ -16,7 +16,7 @@
 <ion-content padding>
 
   	<ion-list >
-        <ion-item *ngFor=" let thread of threadList; let i = index" (click)="viewthread(i)">
+        <ion-item *ngFor=" let thread of threadList; let i = index" (click)="on_Viewthread(thread,i)">
 
           <p style="text-transform: uppercase;">
             

@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>thread</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-card>
+              
+                <ion-item>
+                  
+                  <h2>{{threadList.title}}</h2>
+                  <p>November 5, 1955</p>
+                </ion-item>
+              
+                <!-- <img src="img/advance-card-bttf.png"> -->
+              
+                <ion-card-content>
+                    <p>{{threadList.title}}</p>
+                  <p>{{threadList.description}}</p>
+                </ion-card-content>
+              
+            
+              
+              </ion-card>
+      </ion-col>
+    </ion-row>
+   
+      <ion-row>
+          <ion-col text-center>
+            <button ion-button block (click)="onLeave()">Leave</button>
+          </ion-col>
+        </ion-row>
+  </ion-grid>
+
+</ion-content>
