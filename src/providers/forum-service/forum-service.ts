@@ -19,25 +19,23 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ForumServiceProvider {
 
+  currentUser = JSON.parse(localStorage.getItem('userData'));
+  
+  
+
   constructor(public http: Http) {
     console.log('Hello ForumServiceProvider Provider');
   }
 
-  public currency: any = [];
-
-  public datastore_addThreadUrl = 'http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=';
-  public datastore_addThreadUrl2 = '&data=';
-  public datastore_ViewThreadUrl = 'http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656';
-
-    
-
-  postThreadData(threadData, type) {
+  postThreadData(thread) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
-      let thread_objectID = ('thread' +'-'+ threadData.title)
-      console.log(thread_objectID);
-
-      this.http.post(this.datastore_addThreadUrl + thread_objectID + this.datastore_addThreadUrl2 + JSON.stringify(threadData), {headers: headers})
+      let raw_threadTitle = thread.title;
+      let cleaned_threadTitle = raw_threadTitle.split(' ').join('_');
+      let objID = 'thread-' + this.currentUser.username +'-'+ cleaned_threadTitle;
+    
+    
+      this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+ objID + '&data=' +JSON.stringify(thread), {headers: headers})
          // Call map on the response observable to get the parsed object.
     // Subscribe to the observable to get the parsed object and use it.
     .subscribe((res) => {
@@ -50,7 +48,7 @@ export class ForumServiceProvider {
   }
 
   getThreadData(){
-    return this.http.get(this.datastore_ViewThreadUrl)
+    return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656')
     .do(this.logResponse)
     .map(this.extractData)
     .do(this.logResponse)

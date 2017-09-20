@@ -21,6 +21,8 @@ import { StocksProvider } from '../providers/stocks/stocks';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ForumServiceProvider } from '../providers/forum-service/forum-service';
+import { ThreadsService } from '../services/threads';
+
 
 
 @NgModule({
@@ -61,7 +63,8 @@ import { ForumServiceProvider } from '../providers/forum-service/forum-service';
     StocksProvider,
     Network,
     AuthServiceProvider,
-    ForumServiceProvider
+    ForumServiceProvider,
+    ThreadsService
 
     
   ]

@@ -26,9 +26,13 @@ export class ViewthreadsPage {
   }
 
   ngOnInit(){
-    this.forumServiceProvider.getThreadData().subscribe( data => this.threadList = data);
+     this.forumServiceProvider.getThreadData().subscribe( data => this.threadList = data);
     
   
+}
+
+viewthread(i){
+  console.log(i);
 }
 
 }

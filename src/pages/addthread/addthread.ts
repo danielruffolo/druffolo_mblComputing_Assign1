@@ -5,69 +5,60 @@ import { ViewthreadsPage } from '../viewthreads/viewthreads';
 import {Http, Headers} from '@angular/http';
 import { NgForm } from "@angular/forms";
 import { ForumServiceProvider } from '../../providers/forum-service/forum-service';
-import 'rxjs/add/operator/map';
+import { ThreadsService } from '../../services/threads';
+import { Thread } from "../../models/thread";
 
-var threadArray = [];
+
+
+import 'rxjs/add/operator/map';
 
 
 @Component({
   selector: 'page-addthread',
   templateUrl: 'addthread.html',
 })
+
 export class AddthreadPage {
-  RegDate: String = new Date().toISOString();
-  responseData : any;
-  threadData = {"title": "","topic": "", "content": ""};
 
 
+
+ 
+  
   constructor(public http: Http,
               public navCtrl: NavController,
               public toastCtrl: ToastController,
-              public forumserviceProvider: ForumServiceProvider) {
+              public forumserviceProvider: ForumServiceProvider,
+              public threadsService: ThreadsService) {
   }
 
-  create_Thread(){
+  onSubmit(form: NgForm) {
+        
+        this.addThread(form.value.title, form.value.description);
+       
+        form.reset();
+    
+    }
 
-    var newThread  = {
-      title: this.threadData.title,
-      topic: this.threadData.topic,
-      content: this.threadData.content
-    };
+    addThread(title: string,description: string)
+     
+     {
+          const thread = new Thread(title, description);
+          console.log(thread);
 
+          //we need to get rid of the space character in the title
 
-    threadArray.push([newThread]);
-     console.log (newThread);
-     console.log (threadArray);
+          //output a clead thread.title
+          
+         
 
-    this.forumserviceProvider.postThreadData(threadArray,'addthread').then((result) => {
-     this.responseData = result;
-     console.log(this.responseData);
-     this.navCtrl.push(ViewthreadsPage);
-   }, (err) => {
-     // Error log
-   });
+          
 
- }
+           this.forumserviceProvider.postThreadData(thread)
 
+          //lets to the http post
+        
 
-  // presentToast() {
-  //   let toast = this.toastCtrl.create({
-  //     message: 'You have Registered Successfully',
-  //     duration: 3000,
-  //     position: 'top'
-  //   });
-  
-  //   toast.onDidDismiss(() => {
-  //     console.log('Dismissed toast');
-  //   });
-  
-  //   toast.present();
-  // }
-
-
-
-  // login(){
-  //   //Login page link
-  //   this.navCtrl.push(LoginPage);
-  // }
+          
+          
+      }
 }

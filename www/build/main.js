@@ -8,11 +8,11 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coins_coins__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__viewthreads_viewthreads__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coins_coins__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__viewthreads_viewthreads__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__addthread_addthread__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_network__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_network__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -92,69 +92,16 @@ HomePage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewthreadsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__ = __webpack_require__(104);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the ViewthreadsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var ViewthreadsPage = (function () {
-    function ViewthreadsPage(navCtrl, navParams, forumServiceProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.forumServiceProvider = forumServiceProvider;
-        this.threadList = [];
-    }
-    ViewthreadsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ViewthreadsPage');
-    };
-    ViewthreadsPage.prototype.ngOnInit = function () {
-        var _this = this;
-        this.forumServiceProvider.getThreadData().subscribe(function (data) { return _this.threadList = data; });
-    };
-    return ViewthreadsPage;
-}());
-ViewthreadsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-viewthreads',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/'<!--\n  Generated template for the ViewthreadsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>viewthreads</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  	<ion-list >\n        <ion-item *ngFor=" let thread of threadList; let i = index" (click)="viewthread(i)">\n\n          <p style="text-transform: uppercase;">\n            \n              {{thread}}\n             \n          </p>\n\n        </ion-item>\n          \n      </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]])
-], ViewthreadsPage);
-
-//# sourceMappingURL=viewthreads.js.map
-
-/***/ }),
-
-/***/ 104:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_Observable__);
@@ -184,19 +131,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ForumServiceProvider = (function () {
     function ForumServiceProvider(http) {
         this.http = http;
-        this.currency = [];
-        this.datastore_addThreadUrl = 'http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=';
-        this.datastore_addThreadUrl2 = '&data=';
-        this.datastore_ViewThreadUrl = 'http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656';
+        this.currentUser = JSON.parse(localStorage.getItem('userData'));
         console.log('Hello ForumServiceProvider Provider');
     }
-    ForumServiceProvider.prototype.postThreadData = function (threadData, type) {
+    ForumServiceProvider.prototype.postThreadData = function (thread) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
-            var thread_objectID = ('thread' + '-' + threadData.title);
-            console.log(thread_objectID);
-            _this.http.post(_this.datastore_addThreadUrl + thread_objectID + _this.datastore_addThreadUrl2 + JSON.stringify(threadData), { headers: headers })
+            var raw_threadTitle = thread.title;
+            var cleaned_threadTitle = raw_threadTitle.split(' ').join('_');
+            var objID = 'thread-' + _this.currentUser.username + '-' + cleaned_threadTitle;
+            _this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=' + objID + '&data=' + JSON.stringify(thread), { headers: headers })
                 .subscribe(function (res) {
                 resolve(res);
             }, function (err) {
@@ -205,7 +150,7 @@ var ForumServiceProvider = (function () {
         });
     };
     ForumServiceProvider.prototype.getThreadData = function () {
-        return this.http.get(this.datastore_ViewThreadUrl)
+        return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656')
             .do(this.logResponse)
             .map(this.extractData)
             .do(this.logResponse)
@@ -226,14 +171,15 @@ var ForumServiceProvider = (function () {
 }());
 ForumServiceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], ForumServiceProvider);
 
+var _a;
 //# sourceMappingURL=forum-service.js.map
 
 /***/ }),
 
-/***/ 114:
+/***/ 113:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -242,11 +188,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 114;
+webpackEmptyAsyncContext.id = 113;
 
 /***/ }),
 
-/***/ 156:
+/***/ 155:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -255,11 +201,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 156;
+webpackEmptyAsyncContext.id = 155;
 
 /***/ }),
 
-/***/ 201:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -267,8 +213,8 @@ webpackEmptyAsyncContext.id = 156;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -336,13 +282,13 @@ SignupPage = __decorate([
 
 /***/ }),
 
-/***/ 202:
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -387,14 +333,14 @@ AuthServiceProvider = __decorate([
 
 /***/ }),
 
-/***/ 203:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_stocks_stocks__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -438,20 +384,20 @@ CoinsPage = __decorate([
 
 /***/ }),
 
-/***/ 204:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StocksProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_Observable__);
@@ -507,6 +453,63 @@ StocksProvider = __decorate([
 
 /***/ }),
 
+/***/ 207:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewthreadsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__ = __webpack_require__(103);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the ViewthreadsPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var ViewthreadsPage = (function () {
+    function ViewthreadsPage(navCtrl, navParams, forumServiceProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.forumServiceProvider = forumServiceProvider;
+        this.threadList = [];
+    }
+    ViewthreadsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ViewthreadsPage');
+    };
+    ViewthreadsPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.forumServiceProvider.getThreadData().subscribe(function (data) { return _this.threadList = data; });
+    };
+    ViewthreadsPage.prototype.viewthread = function (i) {
+        console.log(i);
+    };
+    return ViewthreadsPage;
+}());
+ViewthreadsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-viewthreads',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/'<!--\n  Generated template for the ViewthreadsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>viewthreads</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  	<ion-list >\n        <ion-item *ngFor=" let thread of threadList; let i = index" (click)="viewthread(i)">\n\n          <p style="text-transform: uppercase;">\n            \n              {{thread}}\n             \n          </p>\n\n        </ion-item>\n          \n      </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]) === "function" && _c || Object])
+], ViewthreadsPage);
+
+var _a, _b, _c;
+//# sourceMappingURL=viewthreads.js.map
+
+/***/ }),
+
 /***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -514,11 +517,12 @@ StocksProvider = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddthreadPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viewthreads_viewthreads__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_forum_service_forum_service__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_forum_service_forum_service__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_threads__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_thread__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -534,51 +538,104 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var threadArray = [];
+
 var AddthreadPage = (function () {
-    function AddthreadPage(http, navCtrl, toastCtrl, forumserviceProvider) {
+    function AddthreadPage(http, navCtrl, toastCtrl, forumserviceProvider, threadsService) {
         this.http = http;
         this.navCtrl = navCtrl;
         this.toastCtrl = toastCtrl;
         this.forumserviceProvider = forumserviceProvider;
-        this.RegDate = new Date().toISOString();
-        this.threadData = { "title": "", "topic": "", "content": "" };
+        this.threadsService = threadsService;
     }
-    AddthreadPage.prototype.create_Thread = function () {
-        var _this = this;
-        var newThread = {
-            title: this.threadData.title,
-            topic: this.threadData.topic,
-            content: this.threadData.content
-        };
-        threadArray.push([newThread]);
-        console.log(newThread);
-        console.log(threadArray);
-        this.forumserviceProvider.postThreadData(threadArray, 'addthread').then(function (result) {
-            _this.responseData = result;
-            console.log(_this.responseData);
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__viewthreads_viewthreads__["a" /* ViewthreadsPage */]);
-        }, function (err) {
-            // Error log
-        });
+    AddthreadPage.prototype.onSubmit = function (form) {
+        this.addThread(form.value.title, form.value.description);
+        form.reset();
+    };
+    AddthreadPage.prototype.addThread = function (title, description) {
+        var thread = new __WEBPACK_IMPORTED_MODULE_5__models_thread__["a" /* Thread */](title, description);
+        console.log(thread);
+        //we need to get rid of the space character in the title
+        //output a clead thread.title
+        this.forumserviceProvider.postThreadData(thread);
+        //lets to the http post
     };
     return AddthreadPage;
 }());
 AddthreadPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-addthread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/addthread/addthread.html"*/'\n\n    <ion-header>\n        \n          <ion-navbar >\n            <button ion-button menuToggle>\n        \n              <ion-icon name="menu"></ion-icon>\n            </button>\n            <ion-title>Create Thread</ion-title>\n          </ion-navbar>\n        \n        </ion-header>\n\n      <ion-content padding>\n\n\n          <ion-card>\n          \n            <ion-card-content>\n              <ion-list>\n\n                <ion-item>\n                  <ion-label stacked>Thread Title</ion-label>\n                  <ion-input type="text" [(ngModel)]="threadData.title"></ion-input>\n                </ion-item>\n\n                <ion-item>\n                    <ion-label stacked>Thread Topic</ion-label>\n                    <ion-input type="text" [(ngModel)]="threadData.topic"></ion-input>\n                  </ion-item>\n\n                  <ion-item>\n                      <ion-label stacked>Thread Content</ion-label>\n                      <ion-input type="text" [(ngModel)]="threadData.content"></ion-input>\n                    </ion-item>\n\n              \n\n                <button ion-button full color="success" (click)="create_Thread()">Create Thread</button>\n              </ion-list>\n            </ion-card-content>\n\n          </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/addthread/addthread.html"*/,
+        selector: 'page-addthread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/addthread/addthread.html"*/'\n\n    <ion-header>\n        \n          <ion-navbar >\n            <button ion-button menuToggle>\n        \n              <ion-icon name="menu"></ion-icon>\n            </button>\n            <ion-title>Create Thread</ion-title>\n          </ion-navbar>\n        \n        </ion-header>\n\n      \n<ion-content padding>\n    <form #f="ngForm" (ngSubmit)="onSubmit(f)">\n      <ion-list>\n        <ion-item>\n          <ion-label fixed>Title</ion-label>\n          <ion-input\n            type="text"\n            placeholder="Name of the Thread"\n            name="title"\n            ngModel\n            required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Short Description</ion-label>\n          <ion-textarea\n            name="description"\n            ngModel\n            required></ion-textarea>\n        </ion-item>\n      </ion-list>\n        <ion-row>\n          <ion-col>\n            <button\n              ion-button\n              color="secondary"\n              block\n              type="submit"\n               (click)="onSubmit(f)"\n              [disabled]="!f.valid">\n              Create It!\n            </button>\n          </ion-col>\n        </ion-row>\n    </form>\n  </ion-content>\n  \n  '/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/addthread/addthread.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_forum_service_forum_service__["a" /* ForumServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_threads__["a" /* ThreadsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_threads__["a" /* ThreadsService */]) === "function" && _e || Object])
 ], AddthreadPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=addthread.js.map
 
 /***/ }),
 
 /***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThreadsService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_thread__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(25);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ThreadsService = (function () {
+    function ThreadsService(http) {
+        this.http = http;
+        console.log('Hello ForumServiceProvider Provider');
+    }
+    // public threads: Thread[] = [];
+    // public uploadlist: Thread [] = [];
+    // public threads: Array<Thread> = [];
+    ThreadsService.prototype.addThread = function (title, description) {
+        console.log(title);
+        var thread = new __WEBPACK_IMPORTED_MODULE_0__models_thread__["a" /* Thread */](title, description);
+        console.log(thread);
+    };
+    return ThreadsService;
+}());
+ThreadsService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], ThreadsService);
+
+var _a;
+//# sourceMappingURL=threads.js.map
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Thread; });
+var Thread = (function () {
+    function Thread(title, description) {
+        this.title = title;
+        this.description = description;
+    }
+    return Thread;
+}());
+
+//# sourceMappingURL=thread.js.map
+
+/***/ }),
+
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -622,13 +679,13 @@ ProfilePage = __decorate([
 
 /***/ }),
 
-/***/ 210:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -636,29 +693,30 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 228:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_coins_coins__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_profile_profile__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_coins_coins__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_profile_profile__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_addthread_addthread__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_viewthreads_viewthreads__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_stocks_stocks__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_auth_service_auth_service__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_forum_service_forum_service__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_viewthreads_viewthreads__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_stocks_stocks__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_auth_service_auth_service__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_forum_service_forum_service__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_threads__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -683,6 +741,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 // _________________________________________________________________//
 //import providers
+
 
 
 
@@ -726,7 +785,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__providers_stocks_stocks__["a" /* StocksProvider */],
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_network__["a" /* Network */],
             __WEBPACK_IMPORTED_MODULE_16__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_17__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]
+            __WEBPACK_IMPORTED_MODULE_17__providers_forum_service_forum_service__["a" /* ForumServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_18__services_threads__["a" /* ThreadsService */]
         ]
     })
 ], AppModule);
@@ -735,15 +795,15 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 276:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -811,8 +871,8 @@ MyApp = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -869,5 +929,5 @@ LoginPage = __decorate([
 
 /***/ })
 
-},[210]);
+},[212]);
 //# sourceMappingURL=main.js.map
