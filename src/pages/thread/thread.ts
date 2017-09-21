@@ -90,14 +90,15 @@ export class ThreadPage {
 addThreadComment(comment_content: string,comment_author: string,commentReq_obj )
 
 {
-    commentReq_obj = this.threadList.title  ;   
+    
+    commentReq_obj = this.threadList.title  ;  
+    let cleaned_commentReq_obj = commentReq_obj.split(' ').join('_'); 
     comment_author = this.currentUser.username;
     const comment = new Comment(comment_content,comment_author);
     console.log(comment);
-    console.log(commentReq_obj);
-       console.log(commentReq_obj);
+    console.log(cleaned_commentReq_obj);
     
-     this.forumserviceProvider.postThreadCommentData(comment,commentReq_obj)
+     this.forumserviceProvider.postThreadCommentData(comment,cleaned_commentReq_obj)
     
      
  }

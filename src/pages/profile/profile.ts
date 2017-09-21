@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,AlertController } from 'ionic-angular';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { LoginPage } from "../login/login";
+
+
 
 
 @Component({
@@ -7,10 +11,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  pushPage: any;
 
    currentUser = JSON.parse(localStorage.getItem('userData'));
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController,public authService: AuthServiceProvider) {
 
 
   }
@@ -26,6 +31,40 @@ export class ProfilePage {
 
   Deactivate(){
     console.log('your account has been deactivated')
+    this.presentConfirmDeactivate();
+  }
+
+  presentConfirmDeactivate() {
+    let intent = this.currentUser.username;
+    console.log(intent);
+    let alert = this.alertCtrl.create({
+      title: 'Deactivate Account',
+      message: 'Are you sure? This will remove your account!',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Remove',
+          handler: () => {
+            console.log('Buy clicked');
+        
+            this.authService.DeleteAccount(intent)
+
+            this.pushPage = LoginPage;  
+            localStorage.clear();
+            
+              this.navCtrl.setRoot(LoginPage);
+
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

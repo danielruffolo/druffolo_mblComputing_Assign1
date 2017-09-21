@@ -39,6 +39,26 @@ export class AuthServiceProvider {
 
   }
 
+  DeleteAccount(intent) {
+    
+      
+    
+        return new Promise((resolve, reject) => {
+          let headers = new Headers();
+    
+    
+          this.http.post('http://introtoapps.com/datastore.php?action=delete&appid=214231656&objectid=' + intent, {headers: headers})
+             // Call map on the response observable to get the parsed object.
+        // Subscribe to the observable to get the parsed object and use it.
+        .subscribe((res) => {
+          resolve(res);      
+        }, (err) => {
+          console.log(err);
+        });
+        });
+    
+      }
+
 }
 
 

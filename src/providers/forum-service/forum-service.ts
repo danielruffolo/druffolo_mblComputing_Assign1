@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers,Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -35,13 +36,13 @@ export class ForumServiceProvider {
 
   }
 
-  postThreadCommentData(comment,commentReq_obj) {
+  postThreadCommentData(comment,cleaned_commentReq_obj) {
 
     
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
-      let objID = 'threadComments-' + commentReq_obj;
+      let objID = 'threadComments-' + cleaned_commentReq_obj;
       let data=JSON.stringify(comment);
       return this.http.post('http://introtoapps.com/datastore.php?action=append&appid=214231656&objectid='+ objID + '&data=' + data,headers)
       .subscribe((res) => {
@@ -53,13 +54,6 @@ export class ForumServiceProvider {
 
   }
   
-
-  
-
-
-  
-
-
   bindThreadComment(thread) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
@@ -83,7 +77,7 @@ export class ForumServiceProvider {
     .do(this.logResponse)
     .map(this.extractData)
     .do(this.logResponse)
-    .catch(this.catchError)      
+    .catch(this.catchError) 
     }
 
   getThreadData_Instance( string_obj){
