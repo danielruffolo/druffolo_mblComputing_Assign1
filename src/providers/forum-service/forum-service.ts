@@ -7,23 +7,14 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 
-/*
-  Generated class for the ForumServiceProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
-
- 
 
 @Injectable()
 export class ForumServiceProvider {
-
-  currentUser = JSON.parse(localStorage.getItem('userData'));
-  
   
 
-  constructor(public http: Http) {
+    currentUser = JSON.parse(localStorage.getItem('userData'));
+    constructor(public http: Http) {
     console.log('Hello ForumServiceProvider Provider');
   }
 
@@ -33,11 +24,51 @@ export class ForumServiceProvider {
       let raw_threadTitle = thread.title;
       let cleaned_threadTitle = raw_threadTitle.split(' ').join('_');
       let objID = 'thread-' + this.currentUser.username +'-'+ cleaned_threadTitle;
+
+    this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+ objID + '&data=' +JSON.stringify(thread), {headers: headers})
+    .subscribe((res) => {
+      resolve(res);      
+    }, (err) => {
+	    console.log(err);
+    });
+    });
+
+  }
+
+  postThreadCommentData(comment,commentReq_obj) {
+
     
-    
-      this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+ objID + '&data=' +JSON.stringify(thread), {headers: headers})
-         // Call map on the response observable to get the parsed object.
-    // Subscribe to the observable to get the parsed object and use it.
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let objID = 'threadComments-' + commentReq_obj;
+      let data=JSON.stringify(comment);
+      return this.http.post('http://introtoapps.com/datastore.php?action=append&appid=214231656&objectid='+ objID + '&data=' + data,headers)
+      .subscribe((res) => {
+      resolve(res);  
+    }, (err) => {
+	    console.log(err);
+    });
+  });
+
+  }
+  
+
+  
+
+
+  
+
+
+  bindThreadComment(thread) {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      let raw_threadTitle = thread.title;
+      let cleaned_threadTitle = raw_threadTitle.split(' ').join('_');
+      let objID = 'threadComments'+'-'+ cleaned_threadTitle;
+      let comment_init = '[]';
+
+    this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid='+ objID + '&data=' +comment_init, {headers: headers})
     .subscribe((res) => {
       resolve(res);      
     }, (err) => {
@@ -48,7 +79,7 @@ export class ForumServiceProvider {
   }
 
   getThreadData(){
-    return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656')
+    return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread-&appid=214231656')
     .do(this.logResponse)
     .map(this.extractData)
     .do(this.logResponse)
@@ -62,6 +93,20 @@ export class ForumServiceProvider {
     .do(this.logResponse)
     .catch(this.catchError)      
     }
+
+    getThreadComments( formattedId,identifier){
+      console.log (formattedId + identifier);
+      return this.http.get('http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=' + identifier + formattedId)
+      .do(this.logResponse)
+      .map(this.extractData)
+      .do(this.logResponse)
+      .catch(this.catchError)      
+      }
+
+    
+
+
+
 
   private catchError(error : Response | any){
     console.log(error);

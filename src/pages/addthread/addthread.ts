@@ -45,15 +45,9 @@ export class AddthreadPage {
           const thread = new Thread(title, description);
           console.log(thread);
 
-          //we need to get rid of the space character in the title
-
-          //output a clead thread.title
+          this.forumserviceProvider.postThreadData(thread)
+          this.forumserviceProvider.bindThreadComment(thread)
           
-         
-
-          
-
-           this.forumserviceProvider.postThreadData(thread)
 
           //lets to the http post
         

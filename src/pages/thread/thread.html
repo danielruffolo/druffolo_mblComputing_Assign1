@@ -20,6 +20,9 @@
                   <h2>{{threadList.title}}</h2>
                   <p>November 5, 1955</p>
                 </ion-item>
+
+                <hr>
+                
               
                 <!-- <img src="img/advance-card-bttf.png"> -->
               
@@ -31,6 +34,74 @@
             
               
               </ion-card>
+
+
+              <ion-card>
+                  
+                  
+                   
+
+                    <ion-list>
+                        <ion-item *ngFor=" let comment of commentList">
+                          <h2>{{comment.comment_author}}</h2>
+                          <p>{{comment.comment_content}}</p>
+                        </ion-item>
+                      </ion-list>
+              
+                  
+                  </ion-card>
+
+              <ion-card>
+                  
+            
+                  
+                    <!-- <img src="img/advance-card-bttf.png"> -->
+                  
+                    <ion-card-content>
+                        <form #f="ngForm" (ngSubmit)="onSubmitComment(f)">
+                            <ion-list>
+
+                              <ion-item>
+                                <ion-label floating>Comment</ion-label>
+                                <ion-textarea
+                                  type="text"
+                                  name="comment_content"
+                                  ngModel
+                                  required></ion-textarea>
+                              </ion-item>
+                      
+                                <ion-item>
+                                
+
+                                  <button
+                                  ion-button
+                                  color="secondary"
+                                  block
+                                  type="submit"
+                                   (click)="onSubmitComment(f)"
+                                  [disabled]="!f.valid">
+                                  Comment
+                                
+                                </button>
+                                </ion-item>
+                              </ion-list>
+
+
+
+
+                              <ion-row>
+                                <ion-col>
+                              
+                                </ion-col>
+                              </ion-row>
+                          </form>
+                    </ion-card-content>
+                  
+                
+                  
+                  </ion-card>
+
+            
       </ion-col>
     </ion-row>
    

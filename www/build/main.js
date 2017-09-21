@@ -459,10 +459,12 @@ ViewthreadsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-viewthreads',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/'<!--\n  Generated template for the ViewthreadsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>viewthreads</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  	<ion-list >\n        <ion-item *ngFor=" let thread of threadList; let i = index" (click)="on_Viewthread(thread,i)">\n\n          <p style="text-transform: uppercase;">\n            \n              {{thread}}\n             \n          </p>\n\n        </ion-item>\n          \n      </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/viewthreads/viewthreads.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ModalController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ModalController */]])
 ], ViewthreadsPage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=viewthreads.js.map
 
 /***/ }),
@@ -476,8 +478,9 @@ var _a, _b, _c, _d;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_threads__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_comment__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -492,6 +495,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ThreadPage = (function () {
     function ThreadPage(navCtrl, navParams, viewCtrl, forumserviceProvider, threadsService) {
         this.navCtrl = navCtrl;
@@ -499,21 +503,41 @@ var ThreadPage = (function () {
         this.viewCtrl = viewCtrl;
         this.forumserviceProvider = forumserviceProvider;
         this.threadsService = threadsService;
+        this.currentUser = JSON.parse(localStorage.getItem('userData'));
         this.threadList = [];
+        this.commentList = [];
         this.threadList = this.navParams.get('threadList');
         this.index = this.navParams.get('index');
     }
     ThreadPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ThreadPage');
         this.RequestThread_Instance(this.string_obj);
+        this.RequestThread_Instance_comments(this.string_obj, this.identifier);
     };
     ThreadPage.prototype.RequestThread_Instance = function (string_obj) {
         var _this = this;
         string_obj = this.threadList;
-        this.forumserviceProvider.getThreadData_Instance(string_obj).subscribe(function (data) { return _this.threadList = data; });
-        console.log(this.index);
-        console.log(this.threadList);
         console.log(string_obj);
+        this.forumserviceProvider.getThreadData_Instance(string_obj).subscribe(function (data) { return _this.threadList = data; });
+    };
+    ThreadPage.prototype.RequestThread_Instance_comments = function (string_obj, identifier) {
+        var _this = this;
+        identifier = "threadComments-";
+        string_obj = this.threadList;
+        console.log(string_obj);
+        var formattedId = string_obj.split("-").pop();
+        console.log(formattedId);
+        this.forumserviceProvider.getThreadComments(formattedId, identifier).subscribe(function (data) { return _this.commentList = data; });
+    };
+    ThreadPage.prototype.onSubmitComment = function (form) {
+        this.addThreadComment(form.value.comment_content, this.commentReq_obj, this.comment_author);
+        form.reset();
+    };
+    ThreadPage.prototype.addThreadComment = function (comment_content, comment_author, commentReq_obj) {
+        commentReq_obj = this.threadList.title;
+        comment_author = this.currentUser.username;
+        var comment = new __WEBPACK_IMPORTED_MODULE_4__models_comment__["a" /* Comment */](comment_content, comment_author);
+        this.forumserviceProvider.postThreadCommentData(comment, commentReq_obj);
     };
     ThreadPage.prototype.onLeave = function () {
         this.viewCtrl.dismiss();
@@ -522,7 +546,7 @@ var ThreadPage = (function () {
 }());
 ThreadPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-thread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/thread/thread.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>thread</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n          <ion-card>\n              \n                <ion-item>\n                  \n                  <h2>{{threadList.title}}</h2>\n                  <p>November 5, 1955</p>\n                </ion-item>\n              \n                <!-- <img src="img/advance-card-bttf.png"> -->\n              \n                <ion-card-content>\n                    <p>{{threadList.title}}</p>\n                  <p>{{threadList.description}}</p>\n                </ion-card-content>\n              \n            \n              \n              </ion-card>\n      </ion-col>\n    </ion-row>\n   \n      <ion-row>\n          <ion-col text-center>\n            <button ion-button block (click)="onLeave()">Leave</button>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/thread/thread.html"*/,
+        selector: 'page-thread',template:/*ion-inline-start:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/thread/thread.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>thread</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n          <ion-card>\n              \n                <ion-item>\n                  \n                  <h2>{{threadList.title}}</h2>\n                  <p>November 5, 1955</p>\n                </ion-item>\n\n                <hr>\n                \n              \n                <!-- <img src="img/advance-card-bttf.png"> -->\n              \n                <ion-card-content>\n                    <p>{{threadList.title}}</p>\n                  <p>{{threadList.description}}</p>\n                </ion-card-content>\n              \n            \n              \n              </ion-card>\n\n\n              <ion-card>\n                  \n                  \n                   \n\n                    <ion-list>\n                        <ion-item *ngFor=" let comment of commentList">\n                          <h2>{{comment.comment_author}}</h2>\n                          <p>{{comment.comment_content}}</p>\n                        </ion-item>\n                      </ion-list>\n              \n                  \n                  </ion-card>\n\n              <ion-card>\n                  \n            \n                  \n                    <!-- <img src="img/advance-card-bttf.png"> -->\n                  \n                    <ion-card-content>\n                        <form #f="ngForm" (ngSubmit)="onSubmitComment(f)">\n                            <ion-list>\n\n                              <ion-item>\n                                <ion-label floating>Comment</ion-label>\n                                <ion-textarea\n                                  type="text"\n                                  name="comment_content"\n                                  ngModel\n                                  required></ion-textarea>\n                              </ion-item>\n                      \n                                <ion-item>\n                                \n\n                                  <button\n                                  ion-button\n                                  color="secondary"\n                                  block\n                                  type="submit"\n                                   (click)="onSubmitComment(f)"\n                                  [disabled]="!f.valid">\n                                  Comment\n                                \n                                </button>\n                                </ion-item>\n                              </ion-list>\n\n\n\n\n                              <ion-row>\n                                <ion-col>\n                              \n                                </ion-col>\n                              </ion-row>\n                          </form>\n                    </ion-card-content>\n                  \n                \n                  \n                  </ion-card>\n\n            \n      </ion-col>\n    </ion-row>\n   \n      <ion-row>\n          <ion-col text-center>\n            <button ion-button block (click)="onLeave()">Leave</button>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/dansmacbodansmacbookok/Desktop/July/UNI_finalTrimester/Mobile_computing/druffolo_forumproj/druffolo_mblComputing_Assign1/src/pages/thread/thread.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_forum_service_forum_service__["a" /* ForumServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_threads__["a" /* ThreadsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_threads__["a" /* ThreadsService */]) === "function" && _e || Object])
 ], ThreadPage);
@@ -593,9 +617,8 @@ var AddthreadPage = (function () {
     AddthreadPage.prototype.addThread = function (title, description) {
         var thread = new __WEBPACK_IMPORTED_MODULE_5__models_thread__["a" /* Thread */](title, description);
         console.log(thread);
-        //we need to get rid of the space character in the title
-        //output a clead thread.title
         this.forumserviceProvider.postThreadData(thread);
+        this.forumserviceProvider.bindThreadComment(thread);
         //lets to the http post
     };
     return AddthreadPage;
@@ -847,6 +870,23 @@ MyApp = __decorate([
 
 /***/ }),
 
+/***/ 282:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Comment; });
+var Comment = (function () {
+    function Comment(comment_content, comment_author) {
+        this.comment_content = comment_content;
+        this.comment_author = comment_author;
+    }
+    return Comment;
+}());
+
+//# sourceMappingURL=comment.js.map
+
+/***/ }),
+
 /***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -947,12 +987,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/*
-  Generated class for the ForumServiceProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 var ForumServiceProvider = (function () {
     function ForumServiceProvider(http) {
         this.http = http;
@@ -974,8 +1008,39 @@ var ForumServiceProvider = (function () {
             });
         });
     };
+    ForumServiceProvider.prototype.postThreadCommentData = function (comment, commentReq_obj) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            var objID = 'threadComments-' + commentReq_obj;
+            var data = JSON.stringify(comment);
+            return _this.http.post('http://introtoapps.com/datastore.php?action=append&appid=214231656&objectid=' + objID + '&data=' + data, headers)
+                .subscribe(function (res) {
+                resolve(res);
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ForumServiceProvider.prototype.bindThreadComment = function (thread) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            var raw_threadTitle = thread.title;
+            var cleaned_threadTitle = raw_threadTitle.split(' ').join('_');
+            var objID = 'threadComments' + '-' + cleaned_threadTitle;
+            var comment_init = '[]';
+            _this.http.post('http://introtoapps.com/datastore.php?action=save&appid=214231656&objectid=' + objID + '&data=' + comment_init, { headers: headers })
+                .subscribe(function (res) {
+                resolve(res);
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
     ForumServiceProvider.prototype.getThreadData = function () {
-        return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread&appid=214231656')
+        return this.http.get('http://introtoapps.com/datastore.php?action=listall&prefix=thread-&appid=214231656')
             .do(this.logResponse)
             .map(this.extractData)
             .do(this.logResponse)
@@ -983,6 +1048,14 @@ var ForumServiceProvider = (function () {
     };
     ForumServiceProvider.prototype.getThreadData_Instance = function (string_obj) {
         return this.http.get('http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=' + string_obj)
+            .do(this.logResponse)
+            .map(this.extractData)
+            .do(this.logResponse)
+            .catch(this.catchError);
+    };
+    ForumServiceProvider.prototype.getThreadComments = function (formattedId, identifier) {
+        console.log(formattedId + identifier);
+        return this.http.get('http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=' + identifier + formattedId)
             .do(this.logResponse)
             .map(this.extractData)
             .do(this.logResponse)
