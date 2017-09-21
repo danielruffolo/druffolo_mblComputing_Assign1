@@ -5,6 +5,8 @@ import { SignupPage } from '../signup/signup';
 import { Http, Headers } from '@angular/http';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import 'rxjs/add/operator/map';
+import CryptoJS from 'crypto-js';
+
 
 
 let login_API_URL = 'http://introtoapps.com/datastore.php?action=load&appid=214231656&objectid=';
@@ -34,8 +36,17 @@ export class LoginPage {
     this.http.get(login_API_URL + this.userLoginData.username)
     // console.log(this.userLoginData.username)
       .map(res => res.json()).subscribe(responseData => {
+
+        let hashpass = CryptoJS.SHA256(this.userLoginData.password).toString(CryptoJS.enc.Hex);
+        console.log(hashpass);
+        this.userLoginData.password = hashpass;
+        console.log(hashpass);
+    
+   
+    
+
      
-        if (responseData.password == this.userLoginData.password &&
+        if (responseData.password == hashpass &&
            responseData.username == this.userLoginData.username)
           {
 
@@ -59,6 +70,8 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+
+    
 
   }
 

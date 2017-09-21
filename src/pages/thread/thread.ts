@@ -93,6 +93,10 @@ addThreadComment(comment_content: string,comment_author: string,commentReq_obj )
     commentReq_obj = this.threadList.title  ;   
     comment_author = this.currentUser.username;
     const comment = new Comment(comment_content,comment_author);
+    console.log(comment);
+    console.log(commentReq_obj);
+       console.log(commentReq_obj);
+    
      this.forumserviceProvider.postThreadCommentData(comment,commentReq_obj)
     
      

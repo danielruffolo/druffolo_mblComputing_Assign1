@@ -5,6 +5,8 @@ import { LoginPage } from '../login/login';
 import {Http, Headers} from '@angular/http';
 import { NgForm } from "@angular/forms";
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import CryptoJS from 'crypto-js';
+
 
 import 'rxjs/add/operator/map';
 
@@ -26,6 +28,16 @@ export class SignupPage {
   }
 
   signup(){
+
+    let hashpass = CryptoJS.SHA256(this.userData.password).toString(CryptoJS.enc.Hex);
+    console.log(hashpass);
+    this.userData.password = hashpass;
+    console.log(hashpass);
+
+
+    
+
+
     this.authService.postData(this.userData,'signup').then((result) => {
      this.responseData = result;
      console.log(this.responseData);

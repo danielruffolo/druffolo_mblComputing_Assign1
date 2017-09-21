@@ -39,7 +39,6 @@ export class ViewthreadsPage {
 
 on_Viewthread(threadList, index:number){
   const modal = this.modalCtrl.create(ThreadPage, {threadList,index:index});
-  
   modal.present();
 }
 
