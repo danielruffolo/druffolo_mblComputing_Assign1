@@ -1,0 +1,9 @@
+Licences- Druffolo
+
+Pleaase note, No Images where used in this Assigmnet,
+
+Public API Used for getting data relating to currencies
+
+URL:https://coinmarketcap.com/api/
+Type:Free Public Use
+Licensed under the MIT License.

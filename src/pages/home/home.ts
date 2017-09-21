@@ -5,6 +5,8 @@ import { CoinsPage } from "../coins/coins";
 import { ViewthreadsPage } from "../viewthreads/viewthreads";
 import { AddthreadPage } from "../addthread/addthread";
 import { ProfilePage } from "../profile/profile";
+import { AboutPage } from "../about/about";
+
 import { Network } from '@ionic-native/network';
 
 
@@ -63,6 +65,9 @@ export class HomePage {
   view_menu(){
      this.navCtrl.push(ViewthreadsPage);
   }
+//   about_menu(){
+//     this.navCtrl.push(AboutPage);
+//  }
 
   account_menu(){
     this.navCtrl.push(ProfilePage);

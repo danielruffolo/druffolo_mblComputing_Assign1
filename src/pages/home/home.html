@@ -58,14 +58,28 @@ however given we are not at the stage of building a server side, this has been l
 <!-- the intention is to dynamically show updated proces on the dashboard with anamation -->
     <div padding class="dash-coinUpdates" (click)="coins_menu()">
         <h1  style="color:white;">Coin Prices</h1>
-          <ion-row >
+          <ion-row padding style="color:white;" >
             <ion-card class="dash_cardUpdates">
             <ion-card-content>
-              <div class="ion-col col-12 item item-text-wrap"><p>Coin: BTC   Price: 2010.30</p></div>
+              <div class="ion-col col-12 item item-text-wrap"><p>Latest Coin stats</p></div>
             </ion-card-content>
           </ion-card>
       </ion-row>
     </div>
+
+    <!-- <div class="dash-trending"(click)="coins_about"()>
+        <ion-row padding style="color:white;">
+          <div>
+            <h1>About</h1>
+            <p>About The App</p>
+          </div>
+  
+        </ion-row>
+  
+  
+  
+      </div> -->
+  
 
     <div class="dash_lower" padding>
           <ion-row>

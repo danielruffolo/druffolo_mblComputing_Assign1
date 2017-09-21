@@ -16,6 +16,8 @@ import { ProfilePage } from '../pages/profile/profile';
 import { AddthreadPage } from '../pages/addthread/addthread';
 import { ViewthreadsPage } from '../pages/viewthreads/viewthreads';
 import { ThreadPage } from '../pages/thread/thread';
+import { AboutPage } from '../pages/about/about';
+
 
 // _________________________________________________________________//
 //import providers
@@ -37,7 +39,8 @@ import { ThreadsService } from '../services/threads';
     ProfilePage,
     AddthreadPage,
     ViewthreadsPage,
-    ThreadPage
+    ThreadPage,
+    AboutPage
     
     
 
@@ -58,7 +61,8 @@ import { ThreadsService } from '../services/threads';
     ProfilePage,
     AddthreadPage,
     ViewthreadsPage,
-    ThreadPage
+    ThreadPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
