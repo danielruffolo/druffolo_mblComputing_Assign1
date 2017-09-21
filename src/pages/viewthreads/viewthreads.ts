@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,ModalController } from 'ionic-angular';
+import { NavController, NavParams,ModalController,LoadingController } from 'ionic-angular';
 import { ForumServiceProvider} from "../../providers/forum-service/forum-service";
 import { Thread } from "../../models/thread";
 import {ThreadPage} from "../thread/thread";

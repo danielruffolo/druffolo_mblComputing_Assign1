@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,LoadingController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { Http, Headers } from '@angular/http';
@@ -32,6 +32,9 @@ export class LoginPage {
 
   }
   login(){
+
+   
+
 
     this.http.get(login_API_URL + this.userLoginData.username)
     // console.log(this.userLoginData.username)

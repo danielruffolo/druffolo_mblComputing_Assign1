@@ -104,7 +104,7 @@ export class ForumServiceProvider {
 
   private catchError(error : Response | any){
     console.log(error);
-    console.log("something went very wrong");
+    console.log("an error occured");
     return Observable.throw(error.json().error || "network error.");
     }
 

@@ -20,6 +20,9 @@ import 'rxjs/add/operator/map';
 
 export class AddthreadPage {
 
+  index: number;
+  currencyList: any = [];
+
 
 
  
@@ -30,6 +33,9 @@ export class AddthreadPage {
               public forumserviceProvider: ForumServiceProvider,
               public threadsService: ThreadsService) {
   }
+
+  ionViewDidLoad() {
+console.log(this.index);  }
 
   onSubmit(form: NgForm) {
         

@@ -12,7 +12,7 @@
 
   <!-- populate list from API -->
 	<ion-list >
-		<ion-item *ngFor=" let coin of currencyList">
+		<ion-item *ngFor=" let coin of currencyList;let i = index"(click)="on_ClickCoin(coin,i)">
       <p style="text-transform: uppercase;">
           {{coin.id}}
           {{coin.symbol}}
