@@ -9,7 +9,11 @@ import {Http, Headers} from '@angular/http';
 import { NgForm } from "@angular/forms";
 
 
-
+  /**Summary
+  *Thread component is a Modal , only generated when needed with data passed by a index
+  *it allows us to view instances of the thread records, no hardcodeing
+  *the modal is created and disposed in the runtime
+*/
 
 
 @Component({
@@ -44,6 +48,8 @@ export class ThreadPage {
               ) {
     this.threadList = this.navParams.get('threadList');
     this.index = this.navParams.get('index');
+    //here we are passing data we need via a concept called navparams. on click of a list in a array, we
+    //can pass data to the thread that we need at that index
     
   }
 
@@ -51,7 +57,11 @@ export class ThreadPage {
     console.log('ionViewDidLoad ThreadPage');
     this.RequestThread_Instance(this.string_obj);
     this.RequestThread_Instance_comments(this.string_obj,this.identifier);
-    
+      /**here we are loading the modals thread instance data from the datastore using passed in 
+       * object name and its unique identifier
+       * this is what enables us to load records dynamically
+*/
+
 
     }
 
@@ -62,13 +72,19 @@ export class ThreadPage {
     console.log(string_obj);
     
     this.forumserviceProvider.getThreadData_Instance(string_obj).subscribe( data => this.threadList = data);
-    
+    //here we are calling for the thread data instance
+    //and passing it the identifier of what thread object we want
+    //then we return it to thread list array and load the variables through html binding
   }
 
   RequestThread_Instance_comments(string_obj,identifier) {
     identifier = "threadComments-";
     string_obj = this.threadList;
     console.log(string_obj);
+
+        //here we are calling for the thread comment data instance (very similar to above but with miner differences)
+        //here we are only looking for anything with the identifier on the front and the object name
+        
     
     var formattedId = string_obj.split("-").pop();
     console.log(formattedId);

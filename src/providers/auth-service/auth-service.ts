@@ -19,7 +19,7 @@ export class AuthServiceProvider {
   
   
 
-  postData(credentials, type) {
+  postUserLoginData(credentials, type) {
 
   
 

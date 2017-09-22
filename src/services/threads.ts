@@ -10,10 +10,6 @@ export class ThreadsService {
         console.log('Hello ForumServiceProvider Provider');
       }
 
-    // public threads: Thread[] = [];
-    // public uploadlist: Thread [] = [];
-    // public threads: Array<Thread> = [];
-
     addThread(title: string,
              description: string)
             
@@ -21,16 +17,8 @@ export class ThreadsService {
                 console.log(title);
                  const thread = new Thread(title, description);
                  console.log(thread);
-               
-     
-                 
-                 
+                     
              }
-
-             
-
-            //  loadThreads(){
-            //      return this.threads.slice();
-            //  }
+         
 }
 

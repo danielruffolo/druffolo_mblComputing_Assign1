@@ -11,13 +11,19 @@ import CryptoJS from 'crypto-js';
 import 'rxjs/add/operator/map';
 
 
+  /**Summary
+  *signup is the component that allows you to create a user object to login to the app
+*/
+
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',
 })
 export class SignupPage {
+  //declare date object so we can record date of registration
   RegDate: String = new Date().toISOString();
   responseData : any;
+  //declare type user data so we can handle the form data
   userData = {"username": "","password": "", "fname": "","lname": "","email": "","membersince":this.RegDate };
 
 
@@ -29,21 +35,24 @@ export class SignupPage {
 
   signup(){
 
+    //first step is to take the input password and hash it using SHA256
+    //this will ensure no one can see whats in the db password
     let hashpass = CryptoJS.SHA256(this.userData.password).toString(CryptoJS.enc.Hex);
-    console.log(hashpass);
     this.userData.password = hashpass;
-    console.log(hashpass);
 
 
-    
 
+    //we overwrote the type so now we can access our hash password in the userdata type
+    this.authService.postUserLoginData(this.userData,'signup').then((result) => {
 
-    this.authService.postData(this.userData,'signup').then((result) => {
+      //now we save the response data so that we can post that data to the auth service
      this.responseData = result;
-     console.log(this.responseData);
+
+     //if success after the authservice has ran, login
+
      this.navCtrl.push(LoginPage);
    }, (err) => {
-     // Error log
+    
    });
 
  }

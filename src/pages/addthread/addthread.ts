@@ -8,9 +8,15 @@ import { ForumServiceProvider } from '../../providers/forum-service/forum-servic
 import { ThreadsService } from '../../services/threads';
 import { Thread } from "../../models/thread";
 
-
-
 import 'rxjs/add/operator/map';
+
+
+  /**Summary
+   * Add thread component acts as the main data input for the app
+   * users can create a forum entry through data input which is then stored on the server
+*/
+
+
 
 
 @Component({
@@ -20,8 +26,8 @@ import 'rxjs/add/operator/map';
 
 export class AddthreadPage {
 
-  index: number;
-  currencyList: any = [];
+  // index: number;
+  // currencyList: any = [];
 
 
 
@@ -35,7 +41,7 @@ export class AddthreadPage {
   }
 
   ionViewDidLoad() {
-console.log(this.index);  }
+  }
 
   onSubmit(form: NgForm) {
         
@@ -55,8 +61,7 @@ console.log(this.index);  }
           this.forumserviceProvider.bindThreadComment(thread)
           
 
-          //lets to the http post
-        
+      
 
           
           

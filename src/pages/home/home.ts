@@ -1,3 +1,9 @@
+  /**Home Page
+   * the following acts as the home component
+   * the home component acts as the main navigation screen for the app
+   * 
+*/
+
 import { Component } from '@angular/core';
 import { NavController,NavParams,ToastController } from 'ionic-angular';
 import { LoginPage } from "../login/login";
@@ -23,29 +29,45 @@ export class HomePage {
 
   }
 
-  displayNetworkUpdate(connectionState: string){
 
-      let networkType = this.network.type
 
-      this.toast.create({
-          message: `you are now ${connectionState} via ${networkType}`,
-      }).present();
-  }
-
+  /**Network detector
+   * here we are initialising in the app a network detection service
+   * this will detect wether the app looses network connection or not
+   * this could be further impoved later on to stop all http requests IF the connection is down
+   * NOT MY IDEA
+   * the following was aquired using a youtube tutorial by Paul Haliday
+   * https://www.youtube.com/watch?v=r-1xKiEd2-M
+*/
   ionViewDidEnter(){
       
-      this.network.onConnect().subscribe(data => {
-          console.log(data)
-          this.displayNetworkUpdate(data.type);
-
-      }, error => console.error(error));
-
-      this.network.onDisconnect().subscribe(data => {
-          console.log(data)
-          this.displayNetworkUpdate(data.type);
-      }, error => console.error(error));
-      
+    this.detectNet();
   }
+
+  detectNet(){
+
+    this.network.onConnect().subscribe(data => {
+        console.log(data)
+        this.displayNetworkUpdate(data.type);
+
+    }, error => console.error(error));
+
+    this.network.onDisconnect().subscribe(data => {
+        console.log(data)
+        this.displayNetworkUpdate(data.type);
+    }, error => console.error(error));
+    
+
+  }
+
+  displayNetworkUpdate(connectionState: string){
+    
+          let networkType = this.network.type
+    
+          this.toast.create({
+              message: `you are now ${connectionState} via ${networkType}`,
+          }).present();
+      }
 
 
   // this is where we navigate to and from app elements

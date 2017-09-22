@@ -20,6 +20,7 @@ FUNCTIONS THAT I WOULD LIKE TO BE GRADED FOR
 -Retrieve user from DB 
 -Save logged in user data to local storage
 -Deactivate/delete current user on choice
+-Detect loss of network
 
 (note, my edit function has broken and has been taken out of the app, Happy to accept loss of marks!
 Using the Limited API proved to be Challenging for editing single records   )

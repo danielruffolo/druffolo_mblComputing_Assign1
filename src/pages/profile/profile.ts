@@ -5,6 +5,10 @@ import { LoginPage } from "../login/login";
 
 
 
+  /**Summary
+   * Profile page shows how we can see data stored in the user local storage
+   * users can view their account details from here as well as deactivate their accoint
+*/
 
 @Component({
   selector: 'page-profile',
@@ -14,9 +18,9 @@ export class ProfilePage {
   pushPage: any;
 
    currentUser = JSON.parse(localStorage.getItem('userData'));
+  //import local user data
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController,public authService: AuthServiceProvider) {
-
 
   }
 
@@ -30,13 +34,14 @@ export class ProfilePage {
   }
 
   Deactivate(){
-    console.log('your account has been deactivated')
     this.presentConfirmDeactivate();
   }
 
   presentConfirmDeactivate() {
+    //grab the object id of the person we want to delete
     let intent = this.currentUser.username;
     console.log(intent);
+    //post a allert letting the user know your about to delete 
     let alert = this.alertCtrl.create({
       title: 'Deactivate Account',
       message: 'Are you sure? This will remove your account!',
@@ -45,20 +50,23 @@ export class ProfilePage {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
+ 
           }
         },
         {
           text: 'Remove',
           handler: () => {
-            console.log('Buy clicked');
-        
+      
+        //request from the authservice to delete the account currently logged in as
+        //pass in the intent variable which is the uder object id
             this.authService.DeleteAccount(intent)
 
             this.pushPage = LoginPage;  
             localStorage.clear();
+            //delete the local storage
             
               this.navCtrl.setRoot(LoginPage);
+              //clrear the page stack and start fresh
 
           }
         }
