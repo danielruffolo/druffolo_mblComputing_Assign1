@@ -1,5 +1,5 @@
 Daniel Ruffolo 214231656
-Moblile Computing Assignment 2
+Mobile Computing Assignment 2
 Crypto-Forums
 Forums app
 
