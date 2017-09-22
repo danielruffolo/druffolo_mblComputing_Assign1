@@ -12,6 +12,7 @@ App is android Ready and IOS compatable
 FUNCTIONS THAT I WOULD LIKE TO BE GRADED FOR
 
 -create thread(Post to DB)
+-create thread post(sing Dynamic coin api data)
 -view thread (retrieve from DB)
 -Comment on specific thread (post comment to specific thread)
 -Regiser User to DB
