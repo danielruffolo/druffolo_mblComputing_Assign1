@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavController, ToastController} from 'ionic-angular';
 import { HomePage } from '../home/home';
+
 import { ViewthreadsPage } from '../viewthreads/viewthreads';
 import {Http, Headers} from '@angular/http';
 import { NgForm } from "@angular/forms";
@@ -59,6 +60,7 @@ export class AddthreadPage {
 
           this.forumserviceProvider.postThreadData(thread)
           this.forumserviceProvider.bindThreadComment(thread)
+          this.navCtrl.push(ViewthreadsPage);
           
 
       
